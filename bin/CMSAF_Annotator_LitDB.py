@@ -15,7 +15,7 @@ from rdflib.namespace import Namespace, RDF, DC
 import resolve_doi_xml
 
 logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)s', datefmt='%Y-%m-%dT%H:%M:%S%Z', level=logging.INFO)
-
+logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
 
 # some configurable properties
 config_props = {
@@ -25,7 +25,13 @@ config_props = {
     "doi_org_prefix"  :"http://dx.doi.org/" ,
 }
 
-
+definedFieldNames = ["CitingEntity",
+              "CitationEvent",
+              "CitedEntity",
+              "Motivation",
+              "CitingEntityTitle",
+              "CitingEntitySubTitle"
+              ]
 
 #List of namespaces/prefixes we have to use
 namespaces = {
@@ -58,95 +64,96 @@ service_config = {
 
 def csv2ttl(ifh, delimiter=config_props["delimiter"]):
 
-    reader = csv.DictReader(open(ifh, "rb"),
-                            #dialect=config_props["dialect"],
-                            quotechar=config_props["quotechar"],
-                            delimiter=delimiter)
+    with open(ifh, 'rb') as csvfile:
+        dialect = csv.Sniffer().sniff(csvfile.read(1024))
+        csvfile.seek(0)
 
-    file_handles = []
+        reader = csv.DictReader(csvfile,
+                                dialect=dialect,
+                                delimiter=delimiter,
+                                )
 
-    #just for readability when writing the turtle file
-    oa      = Namespace(namespaces["oa"])
-    charme  = Namespace(namespaces["charme"])
-    cito    = Namespace(namespaces["cito"])
-    fabio   = Namespace(namespaces["fabio"])
-    dcmi    = Namespace(namespaces["dcmi"])
-    cnt     = Namespace(namespaces["cnt"])
+        file_handles = []
+
+        #just for readability when writing the turtle file
+        oa      = Namespace(namespaces["oa"])
+        charme  = Namespace(namespaces["charme"])
+        cito    = Namespace(namespaces["cito"])
+        fabio   = Namespace(namespaces["fabio"])
+        dcmi    = Namespace(namespaces["dcmi"])
+        cnt     = Namespace(namespaces["cnt"])
 
 
 
-    #looping through the csv-file and transforming each row to an turtle-file
+        #looping through the csv-file and transforming each row to an turtle-file
+        next(reader)
+        logger.debug("fieldnames: {0}".format(reader.fieldnames))
+        for row in reader:
 
-    for row in reader:
+            try:
+                logger.debug("row:{0}".format(row))
+                if config_props["doi_org_prefix"] not in row["CitedEntity"] :
+                    row["CitedEntity"] = "%s%s" % (config_props["doi_org_prefix"],row["CitedEntity"])
 
-        if logger.getEffectiveLevel() == logging.DEBUG :
-            logger.debug("headers: %s" % row.keys())
-            for key in row.keys():
-                logger.debug ("key:{0} value:{1}".format(key, row[key]))
-        try:
-            logger.debug("row:{0}".format(row))
-            if config_props["doi_org_prefix"] not in row["CitedEntity"] :
-                row["CitedEntity"] = "%s%s" % (config_props["doi_org_prefix"],row["CitedEntity"])
+                stripped_doi = row["CitingEntity"].replace(config_props["doi_org_prefix"],"").replace("/","_")
+                logger.debug("stripped doi: %s" % stripped_doi)
+                #get the title of the doi
+                citing_entity_xml = resolve_doi_xml.get_doi_xml(row["CitingEntity"].replace(config_props["doi_org_prefix"],""),);
+                citing_entity_title = resolve_doi_xml.getXPathValue(citing_entity_xml, "title")
+                #citing_entity_title="some value as dx.doi.org is dead!"
 
-            stripped_doi = row["CitingEntity"].replace(config_props["doi_org_prefix"],"").replace("/","_")
-            logger.debug("stripped doi: %s" % stripped_doi)
-            #get the title of the doi
-            citing_entity_xml = resolve_doi_xml.get_doi_xml(row["CitingEntity"].replace(config_props["doi_org_prefix"],""),);
-            citing_entity_title = resolve_doi_xml.getXPathValue(citing_entity_xml, "title")
-            #citing_entity_title="some value as dx.doi.org is dead!"
+                ofh = open(os.path.join(config_props["dir_stage"],stripped_doi+".ttl"),"w+")
 
-            ofh = open(os.path.join(config_props["dir_stage"],stripped_doi+".ttl"),"w+")
+                logger.debug("create annotation as citation ...")
+                graph = Graph()
+                #the OAnnotation
+                subject = URIRef(charme.annoID)
+                logger.debug("subject: %s" % subject)
+                graph.add((subject, RDF.type, oa.Annotation))
+                graph.add((subject, RDF.type, cito.CitationAct))
+                graph.add((subject, cito.hasCitationCharacterization, cito.citesAsDataSource))
+                graph.add((subject, cito.hasCitedEntity, URIRef(row["CitedEntity"])))
+                graph.add((subject, cito.hasCitingEntity, URIRef(row["CitingEntity"])))
+                graph.add((subject, oa.motivatedBy, oa[row["Motivation"]]))
+                graph.add((subject, oa.hasTarget, URIRef(row["CitedEntity"])))
+                graph.add((subject, oa.hasBody, charme.bodyID))
+                graph.add((subject, oa.hasBody, URIRef(row["CitingEntity"])))
+                #graph.add((subject, oa.annotatedBy, URIRef(config_props["author_id"])))
+                #graph.add((subject, oa.annotatedAt, Literal(get_timestamp())))
 
-            logger.debug("create annotation as citation ...")
-            graph = Graph()
-            #the OAnnotation
-            subject = URIRef(charme.annoID)
-            logger.debug("subject: %s" % subject)
-            graph.add((subject, RDF.type, oa.Annotation))
-            graph.add((subject, RDF.type, cito.CitationAct))
-            graph.add((subject, cito.hasCitationCharacterization, cito.citesAsDataSource))
-            graph.add((subject, cito.hasCitedEntity, URIRef(row["CitedEntity"])))
-            graph.add((subject, cito.hasCitingEntity, URIRef(row["CitingEntity"])))
-            graph.add((subject, oa.motivatedBy, oa[row["Motivation"]]))
-            graph.add((subject, oa.hasTarget, URIRef(row["CitedEntity"])))
-            graph.add((subject, oa.hasBody, charme.bodyID))
-            graph.add((subject, oa.hasBody, URIRef(row["CitingEntity"])))
-            #graph.add((subject, oa.annotatedBy, URIRef(config_props["author_id"])))
-            #graph.add((subject, oa.annotatedAt, Literal(get_timestamp())))
+                #creating the body
+                subject = URIRef(charme.bodyID)
+                graph.add((subject, RDF.type, cnt.ContentAsText))
+                graph.add((subject, RDF.type, dcmi.Text))
+                graph.add((subject, DC["format"], Literal("text/plain")))
+                graph.add((subject, cnt["chars"], Literal(citing_entity_title)))
 
-            #creating the body
-            subject = URIRef(charme.bodyID)
-            graph.add((subject, RDF.type, cnt.ContentAsText))
-            graph.add((subject, RDF.type, dcmi.Text))
-            graph.add((subject, DC["format"], Literal("text/plain")))
-            graph.add((subject, cnt["chars"], Literal(citing_entity_title)))
+                #the citingEntityType
+                subject=URIRef(row["CitingEntity"])
+                graph.add((subject, RDF.type, fabio.JournalArticle))
 
-            #the citingEntityType
-            subject=URIRef(row["CitingEntity"])
-            graph.add((subject, RDF.type, fabio.JournalArticle))
+                #the citedEntityType
+                subject=URIRef(row["CitedEntity"])
+                graph.add((subject, RDF.type, dcmi.Dataset))
 
-            #the citedEntityType
-            subject=URIRef(row["CitedEntity"])
-            graph.add((subject, RDF.type, dcmi.Dataset))
+                graph.bind("oa", oa)
+                graph.bind("cito", cito)
+                graph.bind("cnt", cnt)
+                graph.bind("fabio",fabio)
+                graph.bind("dc", DC)
+                graph.bind("dcmi", dcmi)
+                #graph.bind("charme", charme)
 
-            graph.bind("oa", oa)
-            graph.bind("cito", cito)
-            graph.bind("cnt", cnt)
-            graph.bind("fabio",fabio)
-            graph.bind("dc", DC)
-            graph.bind("dcmi", dcmi)
-            #graph.bind("charme", charme)
+                logger.debug("graph: \n %s" % graph.serialize(format="turtle"))
 
-            logger.debug("graph: \n %s" % graph.serialize(format="turtle"))
+                ofh.write(graph.serialize(format="turtle"))
+                ofh.close()
 
-            ofh.write(graph.serialize(format="turtle"))
-            ofh.close()
+                file_handles.append(ofh.name)
 
-            file_handles.append(ofh.name)
-
-        except IOError as e:
-            logger.error ("I/O error({0}): {1}".format(e.errno, e.strerror))
-            raise
+            except IOError as e:
+                logger.error ("I/O error({0}): {1}".format(e.errno, e.strerror))
+                raise
 
     return file_handles
 
@@ -205,11 +212,9 @@ def usage():
 def main(arguements):
 
     logging.info("called module with arguements:  %s" % arguements)
-    global logger
-    logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
 
     try:
-        opts, args = getopt.getopt(arguements, "i:w:d:l:", [ "inputFile=","workingDir=","delimiter=", "logLevel="])
+        opts, args = getopt.getopt(arguements, "i:w:d:l:h:", [ "inputFile=","workingDir=","delimiter=", "logLevel=", "help"])
         logger.debug("opts: %s" % opts)
         logger.debug("args: %s" % args)
 
@@ -240,7 +245,7 @@ def main(arguements):
     logging.debug("config_props: %s" % config_props)
 
     if (os.path.isfile(ifh)):
-        file_handles = csv2ttl(ifh)
+        file_handles = csv2ttl(ifh, config_props["delimiter"])
         logger.debug ("annotation-file(s) to insert: %s" % file_handles)
         #writing a shell script for transferring the turtle-files to the charme_node
         curling(file_handles)
