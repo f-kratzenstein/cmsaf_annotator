@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://purl.org/dc/terms/"
+   xmlns:ns2="http://www.w3.org/2004/02/skos/core#"
+   xmlns:ns3="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdf1="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#doctypeScheme">
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <ns2:prefLabel xml:lang="en">A SKOS Concept Scheme of document types for the CHARMe project</ns2:prefLabel>
+    <ns2:definition xml:lang="en">Document types are used to enforce a controlled vocabulary for CHARMe body and target elements and to facilitate search functions</ns2:definition>
+    <ns1:creator>Frank Kratzenstein</ns1:creator>
+    <ns1:contributor>Philip Kershaw</ns1:contributor>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#DocType">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">The OWL class for the CHARMe technical document type specifications</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Algorithm Theoretical Basis Document</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/spar/fabio/TechnicalReport"/>
+    <ns2:definition xml:lang="en">SKOS concept for Algorithm Theoretical Basis Document used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">ATBD</ns2:notation>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductUserManual"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ValidationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#OperationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ProductUserManual">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Product User Manual</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/spar/fabio/TechnicalReport"/>
+    <ns2:definition xml:lang="en">SKOS concept for Product User Manual used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">PUM</ns2:notation>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ValidationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#OperationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ValidationReport">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Validation Report</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/spar/fabio/TechnicalReport"/>
+    <ns2:definition xml:lang="en">SKOS concept for Validation Report used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">VR</ns2:notation>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductUserManual"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#OperationReport">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Operation Report</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/spar/fabio/TechnicalReport"/>
+    <ns2:definition xml:lang="en">SKOS concept for Operation Report used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">OpR</ns2:notation>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductUserManual"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ValidationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ServiceMessage">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Service Message</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#OperationReport"/>
+    <ns2:definition xml:lang="en">SKOS concept for Service Message used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">SM</ns2:notation>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductUserManual"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ValidationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#OperationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ProductChangeLog">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Product Change Log</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns2:definition xml:lang="en">SKOS concept for Product Change Log used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">PCL</ns2:notation>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductUserManual"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ValidationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#OperationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#KnownProductDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#KnownProductDisruption">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#doctypeScheme"/>
+    <ns2:prefLabel xml:lang="en">Known Product Disruption</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns2:definition xml:lang="en">SKOS concept for Known Product Disruption used for classifying CHARMe annotation bodies and targets.</ns2:definition>
+    <ns1:created>2014-02-03</ns1:created>
+    <ns1:modified>2014-11-28</ns1:modified>
+    <ns3:versionInfo>1.1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DocType"/>
+    <ns2:notation xml:lang="en">KPD</ns2:notation>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlgorithmTheoreticalBasisDocument"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductUserManual"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ValidationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#OperationReport"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ServiceMessage"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ProductChangeLog"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#SignificantEvents">
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <ns2:prefLabel xml:lang="en">A SKOS Concept Scheme of Significant Events for the CHARMe project</ns2:prefLabel>
+    <ns2:definition xml:lang="en">Significant events (SE) are any events that affect climate data. Categorized into categories (event_type) and sub-categories (event_subtype):</ns2:definition>
+    <ns1:creator>Iryna Rozum</ns1:creator>
+    <ns1:contributor>Philip Kershaw</ns1:contributor>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#SignificantEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">The OWL class of all CHARMe Significant Events</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#Location">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">The OWL class for representing CHARMe Significant Event geographic bounds</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#country">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <rdfs:label xml:lang="en">Country associated with a CHARMe Significant Event</rdfs:label>
+    <ns3:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#namedRegion">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <rdfs:label xml:lang="en">A named region of the world associated with a CHARMe Significant Event</rdfs:label>
+    <ns3:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#location">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <rdfs:range rdf:resource="http://purl.org/voc/charme#Location"/>
+    <rdfs:label xml:lang="en">The geographic location associated with a CHARMe Significant Event</rdfs:label>
+    <ns3:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#eventName">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+    <rdfs:label xml:lang="en">A human-readable name of the Significant Event</rdfs:label>
+    <ns3:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#eventSummary">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+    <rdfs:label xml:lang="en">A plain-text summary of the Significant Event</rdfs:label>
+    <ns3:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ClimateEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Climate Event</ns2:prefLabel>
+    <ns2:definition xml:lang="en">Climate significant event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <ns2:notation xml:lang="en">C</ns2:notation>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#HurricaneEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#VolcanicEruptionEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#ElNinoEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#DroughtEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#StormEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#WildfiresEvent"/>
+    <ns2:topConceptOf rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#HurricaneEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Hurricane event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns2:definition xml:lang="en">Hurricane significant event type, a sub-type of ClimateEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#VolcanicEruptionEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ElNinoEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DroughtEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#StormEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#WildfiresEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#VolcanicEruptionEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Volcanic Eruption</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns2:definition xml:lang="en">Volcanic eruption significant event type, a sub-type of ClimateEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#HurricaneEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ElNinoEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DroughtEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#StormEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#WildfiresEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ElNinoEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">El Nino event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns2:definition xml:lang="en">El Nino significant event type, a sub-type of ClimateEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#HurricaneEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#VolcanicEruptionEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DroughtEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#StormEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#WildfiresEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#DroughtEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Drought event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns2:definition xml:lang="en">Drought significant event type, a sub-type of ClimateEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#HurricaneEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#VolcanicEruptionEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ElNinoEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#StormEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#WildfiresEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#StormEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Storm event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns2:definition xml:lang="en">Storm significant event type, a sub-type of ClimateEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#HurricaneEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#VolcanicEruptionEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ElNinoEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DroughtEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#WildfiresEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#WildfiresEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Wildfires event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns2:definition xml:lang="en">Wildfires significant event type, a sub-type of ClimateEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#ClimateEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#HurricaneEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#VolcanicEruptionEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ElNinoEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DroughtEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#StormEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#SoftwareAndSystemEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Software or system event</ns2:prefLabel>
+    <ns2:definition xml:lang="en">Software/system significant event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <ns2:notation xml:lang="en">S</ns2:notation>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#IfsEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#SystemEvent"/>
+    <ns2:topConceptOf rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#IfsEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">IFS event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#SoftwareAndSystemEvent"/>
+    <ns2:definition xml:lang="en">IFS significant event type, a sub-type of SoftwareAndSystemEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#SoftwareAndSystemEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SoftwareAndSystemEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#SystemEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">System event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#SoftwareAndSystemEvent"/>
+    <ns2:definition xml:lang="en">System significant event type, a sub-type of SoftwareAndSystemEvent</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#SoftwareAndSystemEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#IfsEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#DataAndObservingSystemEvents">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Data or Observing system events</ns2:prefLabel>
+    <ns2:definition xml:lang="en">Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <ns2:notation xml:lang="en">D</ns2:notation>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns2:narrower rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+    <ns2:topConceptOf rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#SatelliteEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Satellite system events</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Satellite event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#DropsondeEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Dropsonde event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Dropsonde event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#AircraftEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Aircraft event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Aircraft event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#BuoyEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Buoy event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Buoy event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#ShipEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Ship event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Ship event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#LandStationEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Land station event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Land station event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#MobileEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Mobile event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Mobile event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AlarmEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#AlarmEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Alarm event</ns2:prefLabel>
+    <ns2:broader rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns2:definition xml:lang="en">Alarm event type, a sub-type of Data / observing system event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#DataAndObservingSystemEvents"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#SatelliteEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#DropsondeEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#AircraftEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#BuoyEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#ShipEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#LandStationEvent"/>
+    <ns3:disjointWith rdf:resource="http://purl.org/voc/charme#MobileEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/charme#OperationalEvent">
+    <rdf1:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf1:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns2:inScheme rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+    <ns2:prefLabel xml:lang="en">Operational events</ns2:prefLabel>
+    <ns2:definition xml:lang="en">Operational event type</ns2:definition>
+    <ns1:created>2014-10-01</ns1:created>
+    <ns1:modified>2014-10-01</ns1:modified>
+    <ns3:versionInfo>1</ns3:versionInfo>
+    <rdfs:subClassOf rdf:resource="http://purl.org/voc/charme#SignificantEvent"/>
+    <ns2:notation xml:lang="en">O</ns2:notation>
+    <ns2:topConceptOf rdf:resource="http://purl.org/voc/charme#SignificantEvents"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://cmsaf.eu/schema/xsd"
+           xmlns:dc="http://datacite.org/schema/kernel-3"
+           targetNamespace="http://cmsaf.eu/schema/xsd"
+           elementFormDefault="qualified"
+           xml:lang="EN">
+    <xs:import namespace="http://datacite.org/schema/kernel-3" schemaLocation="http://schema.datacite.org/meta/kernel-3/metadata.xsd"/>
+    <xs:element name="cmsaf_doi">
+            <xs:annotation>
+                <xs:documentation>
+            Root element of a single record. This wrapper element is for XML implementation only and is not defined in the DataCite DOI standard.
+            Note: This is the case for all wrapper elements within this schema!</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="dc:resource"/>
+                    <xs:element name="cmsaf_datasets" minOccurs="1" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cmsaf_dataset" minOccurs="1" maxOccurs="unbounded">
+                                         <xs:complexType mixed="true">
+                                            <xs:simpleContent>
+                                                <xs:extension base="datasetType">
+                                                    <xs:attribute name="description" type="xs:string" use="required"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                    </xs:element>
+                    <xs:element name="cmsaf_documentations" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cmsaf_documentation" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType mixed="true">
+                                            <xs:simpleContent>
+                                                <xs:extension base="httpType">
+                                                    <xs:attribute name="description" type="xs:string" use="required"/>
+                                                     <xs:attribute name="docTypeRdfUri" type="charmeSkosType" use="optional"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+    </xs:element>
+ 	<!-- TYPE DECLARATIONS -->
+	<!-- defines the value for a DOI: DOI must start with "10."  -->
+	<xs:simpleType name="doiType">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="10\..+/.+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- defines value for mandatory fields -->
+	<xs:simpleType name="nonemptycontentStringType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+    <!-- defines value for dataset -->
+    <xs:simpleType name="datasetType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(([0-9]){5})+(_(([0-9]){5})){0,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- defines value for http://??? -->
+    <xs:simpleType name="httpType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[hH][tT]{2}[pP]://.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- defines value for charme vocabulary -->
+    <xs:simpleType name="charmeSkosType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="http://purl.org/voc/charme#.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

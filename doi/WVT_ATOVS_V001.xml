@@ -1,0 +1,54 @@
+<resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
+	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/WVT_ATOVS/V001</identifier>
+	<creators>
+		<creator>
+			<creatorName>Courcoux, Nathalie</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Schr&#246;der, Marc</creatorName>
+		</creator>
+	</creators>
+	<titles>
+		<title>Vertically integrated water vapour, humidity and temperature at pressures levels and layers from ATOVS</title>
+		<title titleType="Subtitle">Daily Means / Monthly Means</title> 
+	</titles>
+	<publisher>Satellite Application Facility on Climate Monitoring (CM&#x00a0;SAF)</publisher>
+	<publicationYear>2013</publicationYear>
+	<resourceType resourceTypeGeneral="Dataset">grid</resourceType>
+	<sizes>
+        <!-- suggestion by Martin Werscheck, 20120824:
+		<size>6.1 GiB</size>
+        -->
+		<size>56 GB</size>
+	</sizes>
+	<formats>
+		<format>NetCDF</format>
+	</formats>
+	<version>1.0</version>
+	<descriptions>
+		<description descriptionType="Abstract">The CM&#x00a0;SAF ATOVS data set offers 13 years 
+		(01 January 1999 - 31 December 2011) of water vapour and temperature satellite-derived global products. 
+		Different parameters generated simultaneously are available: vertically integrated water 
+		vapour (kg/m2), vertically integrated water vapour (kg/m2) and mean temperature (K) in 5 layers, 
+		specific humidity (g/kg) and temperature (K) on 6 levels. Also available are number of valid 
+		observations and an uncertainty estimate. The data set was derived from ATOVS onboard the NOAA 
+		satellites, NOAA-15, NOAA-16, NOAA-17, NOAA-18, NOAA-19 and onboard the European Metop-A satellite. 
+		ATOVS is composed of three instruments: HIRS, AMSU-B/MHS and AMSU-A. After application of a kriging 
+		routine, the products are available as daily and monthly means on a cylindrical equal area projection 
+		of 90km×90km. Grid information is given for centre position. Layers are (hPa): 200-300, 300-500, 
+		500-700, 700-850, 850-surface. Levels are: 200, 300, 500, 700, 850, 1000 hPa.</description>
+	</descriptions>
+	<cmsaf_datasets>
+		<cmsaf_dataset description="Vertically integrated water vapour (HTW) - daily mean">19114</cmsaf_dataset>
+		<cmsaf_dataset description="Vertically integrated  water vapour (HTW) - monthly mean">19116</cmsaf_dataset>
+		<cmsaf_dataset description="Layered water vapour and temperature (HLW) - daily mean">19106</cmsaf_dataset>
+		<cmsaf_dataset description="Layered water vapour and temperature (HLW) - monthly mean">19108</cmsaf_dataset>
+		<cmsaf_dataset description="Specific humidity and temperature at pressure levels (HSH) - daily mean">19110</cmsaf_dataset>
+		<cmsaf_dataset description="Specific humidity and temperature at pressure levels (HSH) - monthly mean">19112</cmsaf_dataset>
+	</cmsaf_datasets>
+	<cmsaf_documentations>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD)">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_ATOVS_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM)">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_ATOVS_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_ATOVS_1.pdf?__blob=publicationFile</cmsaf_documentation>
+	</cmsaf_documentations>
+</resource>

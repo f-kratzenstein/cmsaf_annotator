@@ -1,0 +1,40 @@
+<resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
+	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/DAL_MVIRI_SEVIRI/V001</identifier>
+	<creators>
+		<creator>
+			<creatorName>M&#252;ller, Richard</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Trentmann, J&#246;rg</creatorName>
+		</creator>
+	</creators>
+	<titles>
+		<title>CM SAF Meteosat Surface Radiation Daylight Data Set 1.0</title>
+		<title titleType="Subtitle">Monthly Means / Daily Means </title> 
+	</titles>
+	<publisher>Satellite Application Facility on Climate Monitoring (CM SAF)</publisher>
+	<publicationYear>2013</publicationYear>
+	<resourceType resourceTypeGeneral="Dataset">grid</resourceType>
+	<sizes>
+     		<size>198 GB</size>
+	</sizes>
+	<formats>
+		<format>NetCDF</format>
+	</formats>
+	<version>1.0</version>
+	<descriptions>
+		<description descriptionType="Abstract">The CM SAF Daylight Data Set is a satellite-based climatology derived from satellite-observations from the visible channel of the Meteosat satellites. The data are available from 1983 to 2011 and cover the region &#x00b1;65&#x00b0; longitude and &#x00b1;65&#x0b0; latitude. The products are available as monthly, and daily means on a regular latitude/longitude grid with a spatial resolution of 0.05&#x00b0; x 0.05&#x00b0; degrees.</description>
+	</descriptions>
+	<cmsaf_datasets>
+		<cmsaf_dataset description="Daylight (DAL) MFG/MVIRI - daily mean">21064_21065_21066_21067_21068_21069</cmsaf_dataset>	
+		<cmsaf_dataset description="Daylight (DAL) MFG/MVIRI - monthly mean">21057_21058_21059_21060_21061_21062</cmsaf_dataset>
+		<cmsaf_dataset description="Daylight (DAL) MSG/SEVIRI - daily mean">20899_20901</cmsaf_dataset>	
+		<cmsaf_dataset description="Daylight (DAL) MSG SEVIRI - monthly mean">20903_20905</cmsaf_dataset>
+	
+	</cmsaf_datasets>
+	<cmsaf_documentations>
+    <cmsaf_documentation description="Algorithm Theoretical	Baseline Document (ATBD)">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_DAL_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM)">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_DAL_RAD_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_DAL_RAD_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
+	</cmsaf_documentations>
+</resource>

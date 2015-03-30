@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <records>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>877</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">877</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Brinckmann, Sven</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, Jörg</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Ahrens, Bodo</style>
+                    </author>
+                </authors>
+            </contributors>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">Homogeneity Analysis of the CM SAF Surface Solar
+                        Irradiance Dataset Derived from Geostationary Satellite Observations
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing</style>
+                </secondary-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">352-378</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">6</style>
+            </volume>
+            <number>
+                <style face="normal" font="default" size="100%">1</style>
+            </number>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2013</style>
+                </year>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">2072-4292</style>
+            </isbn>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <pdf-urls>
+                    <url>internal-pdf://2295202566/Brinckmann_2014_HomogeneityAnalysisCMSAFSurfac.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.3390/rs6010352</style>
+            </electronic-resource-num>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>799</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">799</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Karlsson, K. G.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Riihelä, A.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Müller, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Meirink, J. F.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Sedlar, J.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Stengel, M.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Lockhoff, M.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, J.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Kaspar, F.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Hollmann, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Wolters, E.</style>
+                    </author>
+                </authors>
+            </contributors>
+            <auth-address>
+                <style face="normal" font="default" size="100%">Karlsson, KG&#xD;Swedish Meteorol &amp; Hydrol Inst,
+                    S-60176 Norrkoping, Sweden&#xD;Swedish Meteorol &amp; Hydrol Inst, S-60176 Norrkoping, Sweden&#xD;Swedish
+                    Meteorol &amp; Hydrol Inst, S-60176 Norrkoping, Sweden&#xD;Finnish Meteorol Inst, FIN-00101
+                    Helsinki, Finland&#xD;Deutsch Wetterdienst DWD, Offenbach, Germany&#xD;Royal Netherlands Meteorol
+                    Inst KNMI, De Bilt, Netherlands
+                </style>
+            </auth-address>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">CLARA-A1: a cloud, albedo, and radiation dataset
+                        from 28 yr of global AVHRR data
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Atmospheric Chemistry and Physics</style>
+                </secondary-title>
+                <alt-title>
+                    <style face="normal" font="default" size="100%">Atmos Chem Phys</style>
+                </alt-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Atmospheric Chemistry and Physics</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">5351-5367</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">13</style>
+            </volume>
+            <number>
+                <style face="normal" font="default" size="100%">10</style>
+            </number>
+            <keywords>
+                <keyword>
+                    <style face="normal" font="default" size="100%">satellite application facility</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">solar surface irradiance</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">water path</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">cm-saf</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">algorithm</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">reflectance</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">calibration</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">retrieval</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">models</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">assimilation</style>
+                </keyword>
+            </keywords>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2013</style>
+                </year>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">1680-7324</style>
+            </isbn>
+            <accession-num>
+                <style face="normal" font="default" size="100%">WOS:000319749400019</style>
+            </accession-num>
+            <abstract>
+                <style face="normal" font="default" size="100%">A new satellite-derived climate dataset - denoted
+                    CLARA-A1 (&quot;The CM SAF cLoud, Albedo and RAdiation dataset from AVHRR data&quot;) - is
+                    described. The dataset covers the 28 yr period from 1982 until 2009 and consists of cloud, surface
+                    albedo, and radiation budget products derived from the AVHRR (Advanced Very High Resolution
+                    Radiometer) sensor carried by polar-orbiting operational meteorological satellites. Its content,
+                    anticipated accuracies, limitations, and potential applications are described. The dataset is
+                    produced by the EUMETSAT Climate Monitoring Satellite Application Facility (CM SAF) project.&#xD;The
+                    dataset has its strengths in the long duration, its foundation upon a homogenized AVHRR radiance
+                    data record, and in some unique features, e. g. the availability of 28 yr of summer surface albedo
+                    and cloudiness parameters over the polar regions. Quality characteristics are also well investigated
+                    and particularly useful results can be found over the tropics, mid to high latitudes and over nearly
+                    all oceanic areas.&#xD;Being the first CM SAF dataset of its kind, an intensive evaluation of the
+                    quality of the datasets was performed and major findings with regard to merits and shortcomings of
+                    the datasets are reported. However, the CM SAF&apos;s long-term commitment to perform two additional
+                    reprocessing events within the time frame 2013-2018 will allow proper handling of limitations as
+                    well as upgrading the dataset with new features (e. g. uncertainty estimates) and extension of the
+                    temporal coverage.
+                </style>
+            </abstract>
+            <notes>
+                <style face="normal" font="default" size="100%">155LK&#xD;Times Cited:11&#xD;Cited References Count:56
+                </style>
+            </notes>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/CLARA_AVHRR/V001</style>
+            </reviewed-item>
+            <urls>
+                <related-urls>
+                    <url>
+                        <style face="normal" font="default" size="100%">&lt;Go to ISI&gt;://WOS:000319749400019</style>
+                    </url>
+                </related-urls>
+                <pdf-urls>
+                    <url>internal-pdf://1205113917/Karlsson_2013_CLARACloudAlbedoRadiation28yrsGl.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.5194/acp-13-5351-2013</style>
+            </electronic-resource-num>
+            <language>
+                <style face="normal" font="default" size="100%">English</style>
+            </language>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>837</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">837</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Krähenmann, Stefan</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Obregon, Andre</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Müller, Richard</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, Jörg</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Ahrens, Bodo</style>
+                    </author>
+                </authors>
+            </contributors>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">A Satellite-Based Surface Radiation Climatology
+                        Derived by Combining Climate Data Records and Near-Real-Time Data
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing</style>
+                </secondary-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">4693-4718</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">5</style>
+            </volume>
+            <number>
+                <style face="normal" font="default" size="100%">9</style>
+            </number>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2013</style>
+                </year>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">2072-4292</style>
+            </isbn>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <pdf-urls>
+                    <url>internal-pdf://0836318197/Kraehenmann_2013_SatelliteBasedSurfaceRadiatio.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.3390/rs5094693</style>
+            </electronic-resource-num>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>682</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">682</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Mueller, Richard</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, Jörg</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Träger-Chatterjee, Christine</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Posselt, Rebekka</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Stöckli, Reto</style>
+                    </author>
+                </authors>
+            </contributors>
+            <auth-address>
+                <style face="normal" font="default" size="100%">Mueller, R&#xD;Deutsch Wetterdienst, Frankfurter Str
+                    135, D-60387 Offenbach, Germany&#xD;Deutsch Wetterdienst, Frankfurter Str 135, D-60387 Offenbach,
+                    Germany&#xD;Deutsch Wetterdienst, D-60387 Offenbach, Germany&#xD;MeteoSchweiz, CH-8044 Zurich,
+                    Switzerland
+                </style>
+            </auth-address>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">The Role of the Effective Cloud Albedo for Climate
+                        Monitoring and Analysis
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing</style>
+                </secondary-title>
+                <alt-title>
+                    <style face="normal" font="default" size="100%">Remote Sens-Basel</style>
+                </alt-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">2305-2320</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">3</style>
+            </volume>
+            <number>
+                <style face="normal" font="default" size="100%">12</style>
+            </number>
+            <keywords>
+                <keyword>
+                    <style face="normal" font="default" size="100%">cloud albedo</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">solar irradiance</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">earth radiation budget</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">climate</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">atmosphere radiative fluxes</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">solar surface irradiance</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">isccp data sets</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">satellite</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">images</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">budget</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">top</style>
+                </keyword>
+            </keywords>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2011</style>
+                </year>
+                <pub-dates>
+                    <date>
+                        <style face="normal" font="default" size="100%">Nov</style>
+                    </date>
+                </pub-dates>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">2072-4292</style>
+            </isbn>
+            <accession-num>
+                <style face="normal" font="default" size="100%">WOS:000306754600001</style>
+            </accession-num>
+            <abstract>
+                <style face="normal" font="default" size="100%">Cloud properties and the Earth&apos;s radiation budget
+                    are defined as essential climate variables by the Global Climate Observing System (GCOS). The cloud
+                    albedo is a measure for the portion of solar radiation reflected back to space by clouds. This
+                    information is essential for the analysis and interpretation of the Earth&apos;s radiation budget
+                    and the solar surface irradiance. We present and discuss a method for the production of the
+                    effective cloud albedo and the solar surface irradiance based on the visible channel (0.45-1 mu m)
+                    on-board of the Meteosat satellites. This method includes a newly developed self-calibration
+                    approach and has been used to generate a 23-year long (1983-2005) continuous and validated climate
+                    data record of the effective cloud albedo and the solar surface irradiance. Using this climate data
+                    record we demonstrate the ability of the method to generate the two essential climate variables in
+                    high accuracy and homogeneity. Further on, we discuss the role of the cloud albedo within climate
+                    monitoring and analysis. We found trends with opposite sign in the observed effective cloud albedo
+                    resulting in positive trends in the solar surface irradiance over ocean and partly negative trends
+                    over land. Ground measurements are scarce over the ocean and thus satellite-derived effective cloud
+                    albedo and solar surface irradiance constitutes a unique observational data source. Within this
+                    scope it has to be considered that the ocean is the main energy reservoir of the Earth, which
+                    emphasises the role of satellite-observed effective cloud albedo and derived solar surface
+                    irradiance as essential climate variables for climate monitoring and analysis.
+                </style>
+            </abstract>
+            <notes>
+                <style face="normal" font="default" size="100%">978OX&#xD;Times Cited:10&#xD;Cited References Count:25
+                </style>
+            </notes>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <related-urls>
+                    <url>
+                        <style face="normal" font="default" size="100%">&lt;Go to ISI&gt;://WOS:000306754600001</style>
+                    </url>
+                </related-urls>
+                <pdf-urls>
+                    <url>internal-pdf://1281150652/Mueller_2011_RoleEffectiveCloudAlbedo.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.3390/rs3112305</style>
+            </electronic-resource-num>
+            <language>
+                <style face="normal" font="default" size="100%">English</style>
+            </language>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>873</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">873</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Generic">13</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Posselt, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Mueller, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, J.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Stockli, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Liniger, M. A.</style>
+                    </author>
+                </authors>
+            </contributors>
+            <auth-address>
+                <style face="normal" font="default" size="100%">Posselt, R&#xD;Fed Off Meteorol &amp; Climatol
+                    MeteoSwiss, Zurich, Switzerland&#xD;Fed Off Meteorol &amp; Climatol MeteoSwiss, Zurich, Switzerland&#xD;Fed
+                    Off Meteorol &amp; Climatol MeteoSwiss, Zurich, Switzerland&#xD;German Meteorol Serv, Offenbach,
+                    Germany
+                </style>
+            </auth-address>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">A surface radiation climatology across two Meteosat
+                        satellite generations
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing of Environment</style>
+                </secondary-title>
+                <alt-title>
+                    <style face="normal" font="default" size="100%">Remote Sens Environ</style>
+                </alt-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing of Environment</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">103-110</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">142</style>
+            </volume>
+            <keywords>
+                <keyword>
+                    <style face="normal" font="default" size="100%">solar surface irradiance</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">climate data records</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">satellite remote sensing</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">normal homogeneity test</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">cm-saf</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">irradiance</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">retrieval</style>
+                </keyword>
+            </keywords>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2014</style>
+                </year>
+                <pub-dates>
+                    <date>
+                        <style face="normal" font="default" size="100%">Feb 25</style>
+                    </date>
+                </pub-dates>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">00344257</style>
+            </isbn>
+            <accession-num>
+                <style face="normal" font="default" size="100%">WOS:000331023000010</style>
+            </accession-num>
+            <abstract>
+                <style face="normal" font="default" size="100%">Long-term observations of the surface radiation budget
+                    are essential for climate monitoring, climate model evaluation and solar energy applications. The
+                    Satellite Application Facility on Climate Monitoring (CM SAF) released a climate data record (CDR)
+                    of global and direct surface irradiance as well as effective cloud albedo derived from observations
+                    of the Meteosat First Generation satellites (MFG, 1983-2005). This study presents an extension of
+                    this CDR using measurements from the Meteosat Second Generation satellites (MSG, 2004-present). This
+                    extended surface radiation dataset spans nearly 30 years of data and, therefore, is in its uniquely
+                    high temporal and spatial resolution a valuable contribution to the climate community.&#xD;In order
+                    to enable climatological consistency and homogeneity, the retrieval algorithm had to be modified for
+                    MSG: 1. The two narrowband visible channels of the MSG satellites are combined to simulate the MFG
+                    broadband visible channel; 2. The maximum cloud reflectance is empirically adjusted to account for
+                    the differences in the dynamic range of MSG compared to MFG.&#xD;The extended dataset is tested for
+                    homogeneity and no significant breaks are detected during the overlap period of 2004-2005.
+                    Validation of the extended global radiation dataset against ground based observations from the
+                    Baseline Surface Radiation Network yields a mean monthly absolute bias of 8.15 W m(-2). This
+                    complies with the target accuracy threshold of 15 W m(-2) defined by the Global Climate Observing
+                    System.&#xD;Global radiation has an overall positive, and significant, trend over the Meteosat disk
+                    which is mainly due to a negative trend in the effective cloud albedo, i.e., a decrease in
+                    cloudiness. Trends due to changes in the clear sky radiation are small and only induced by trends in
+                    the water vapor fields. Trends caused by changes in the direct effects of atmospheric aerosol are
+                    not represented because an aerosol climatology is used. (C) 2013 The Authors. Published by Elsevier
+                    Inc All rights reserved.
+                </style>
+            </abstract>
+            <notes>
+                <style face="normal" font="default" size="100%">Aa3vm&#xD;Times Cited:0&#xD;Cited References Count:26
+                </style>
+            </notes>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <related-urls>
+                    <url>
+                        <style face="normal" font="default" size="100%">&lt;Go to ISI&gt;://WOS:000331023000010</style>
+                    </url>
+                </related-urls>
+                <pdf-urls>
+                    <url>internal-pdf://1042848232/Posselt_2014_SurfaceRadiationClimatologyAcross.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.1016/j.rse.2013.11.007</style>
+            </electronic-resource-num>
+            <language>
+                <style face="normal" font="default" size="100%">English</style>
+            </language>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>1</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">1</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Posselt, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Mueller, R. W.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Stöckli, R.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, J.</style>
+                    </author>
+                </authors>
+            </contributors>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">Remote sensing of solar surface radiation for
+                        climate monitoring — the CM-SAF retrieval in international comparison
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing of Environment</style>
+                </secondary-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing of Environment</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">186-198</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">118</style>
+            </volume>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2012</style>
+                </year>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">00344257</style>
+            </isbn>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <pdf-urls>
+                    <url>internal-pdf://0080512645/Posselt_2012_RemoteSensingSolarSurfaceRadiatio.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.1016/j.rse.2011.11.016</style>
+            </electronic-resource-num>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>823</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">823</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Sanchez-Lorenzo, Arturo</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, Joerg</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Wild, Martin</style>
+                    </author>
+                </authors>
+            </contributors>
+            <auth-address>
+                <style face="normal" font="default" size="100%">Sanchez-Lorenzo, A&#xD;ETH, Inst Atmospher &amp; Climate
+                    Sci, Zurich, Switzerland&#xD;ETH, Inst Atmospher &amp; Climate Sci, Zurich, Switzerland&#xD;ETH,
+                    Inst Atmospher &amp; Climate Sci, Zurich, Switzerland
+                </style>
+            </auth-address>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">Validation of monthly surface solar radiation over
+                        Europe derived from the CM SAF dataset against homogenized GEBA series (1983-2005)
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Radiation Processes in the Atmosphere and Ocean
+                        (Irs2012)
+                    </style>
+                </secondary-title>
+                <alt-title>
+                    <style face="normal" font="default" size="100%">Aip Conf Proc</style>
+                </alt-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Radiation Processes in the Atmosphere and Ocean
+                        (Irs2012)
+                    </style>
+                </full-title>
+                <abbr-1>
+                    <style face="normal" font="default" size="100%">Aip Conf Proc</style>
+                </abbr-1>
+            </periodical>
+            <alt-periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Radiation Processes in the Atmosphere and Ocean
+                        (Irs2012)
+                    </style>
+                </full-title>
+                <abbr-1>
+                    <style face="normal" font="default" size="100%">Aip Conf Proc</style>
+                </abbr-1>
+            </alt-periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">432-435</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">1531</style>
+            </volume>
+            <keywords>
+                <keyword>
+                    <style face="normal" font="default" size="100%">surface solar radiation</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">satellite-derived</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">surface observations</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">climatological mean</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">validation</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">europe</style>
+                </keyword>
+                <keyword>
+                    <style face="normal" font="default" size="100%">trends</style>
+                </keyword>
+            </keywords>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2013</style>
+                </year>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">0094243X</style>
+            </isbn>
+            <accession-num>
+                <style face="normal" font="default" size="100%">WOS:000320763100105</style>
+            </accession-num>
+            <abstract>
+                <style face="normal" font="default" size="100%">This work presents a validation of the solar surface
+                    radiation (SSR) derived from the Satellite Application Facility on Climate Monitoring (CM SAF) over
+                    Europe for a 23-years period of records on monthly basis. The derived SSR is based on the visible
+                    channel of the Meteosat First Generation satellites, providing a dataset with a high spatial
+                    resolution (0.03 degrees x 0.03 degrees) covering the 1983-2005 period. The CM SAF SSR dataset is
+                    compared against 47 of the long-term SSR monthly series recently homogenized from the Global Energy
+                    Balance Archive (GEBA) over Europe. The results show an excellent agreement between both datasets (r
+                    = 0.93, p &lt; 0.01), with only a slight overestimation (bias of +5.20 Wm(-2)) of the CM SAF records
+                    as compared to the surface observations. Equally, there is a mean absolute bias (MAB) of 8.19 Wm(-2)
+                    that is below the accuracy threshold defined by the CM SAF. There is a clear maximum and minimum MAB
+                    during the summer and winter, respectively, with an opposite cycle if the relative MAB values are
+                    considered.
+                </style>
+            </abstract>
+            <notes>
+                <style face="normal" font="default" size="100%">Bfo62&#xD;Times Cited:0&#xD;Cited References Count:11&#xD;AIP
+                    Conference Proceedings
+                </style>
+            </notes>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <related-urls>
+                    <url>
+                        <style face="normal" font="default" size="100%">&lt;Go to ISI&gt;://WOS:000320763100105</style>
+                    </url>
+                </related-urls>
+                <pdf-urls>
+                    <url>internal-pdf://0347395722/Sanchez-Lorenzo_2013_ValidationCMSAFSurfaceSol.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.1063/1.4804799</style>
+            </electronic-resource-num>
+            <language>
+                <style face="normal" font="default" size="100%">English</style>
+            </language>
+        </record>
+        <record>
+            <database name="JoergEndnoteLibrary.enl"
+                      path="P:\CM_SAF\Science\WGradiation\RAD-Publications\Endnote\JoergEndnoteLibrary.enl">
+                JoergEndnoteLibrary.enl
+            </database>
+            <source-app name="EndNote" version="17.1">EndNote</source-app>
+            <rec-number>777</rec-number>
+            <foreign-keys>
+                <key app="EN" db-id="wzae9vvzfwxrs7ewwzb5tpxb2xet5zwve25f">777</key>
+                <key app="ENWeb" db-id="">0</key>
+            </foreign-keys>
+            <ref-type name="Journal Article">17</ref-type>
+            <contributors>
+                <authors>
+                    <author>
+                        <style face="normal" font="default" size="100%">Sanchez-Lorenzo, A.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Wild, M.</style>
+                    </author>
+                    <author>
+                        <style face="normal" font="default" size="100%">Trentmann, J.</style>
+                    </author>
+                </authors>
+            </contributors>
+            <titles>
+                <title>
+                    <style face="normal" font="default" size="100%">Validation and stability assessment of the monthly
+                        mean CM SAF surface solar radiation dataset over Europe against a homogenized surface dataset
+                        (1983–2005)
+                    </style>
+                </title>
+                <secondary-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing of Environment</style>
+                </secondary-title>
+            </titles>
+            <periodical>
+                <full-title>
+                    <style face="normal" font="default" size="100%">Remote Sensing of Environment</style>
+                </full-title>
+            </periodical>
+            <pages>
+                <style face="normal" font="default" size="100%">355-366</style>
+            </pages>
+            <volume>
+                <style face="normal" font="default" size="100%">134</style>
+            </volume>
+            <dates>
+                <year>
+                    <style face="normal" font="default" size="100%">2013</style>
+                </year>
+            </dates>
+            <isbn>
+                <style face="normal" font="default" size="100%">00344257</style>
+            </isbn>
+            <reviewed-item>
+                <style face="normal" font="default" size="100%">10.5676/EUM_SAF_CM/RAD_MVIRI/V001</style>
+            </reviewed-item>
+            <urls>
+                <pdf-urls>
+                    <url>internal-pdf://1274925497/Sanchez-Lorenzo_2013_ValidationStabilityAssess.pdf</url>
+                </pdf-urls>
+            </urls>
+            <electronic-resource-num>
+                <style face="normal" font="default" size="100%">10.1016/j.rse.2013.03.012</style>
+            </electronic-resource-num>
+        </record>
+    </records>
+</xml>

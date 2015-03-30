@@ -1,0 +1,58 @@
+<resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
+	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/HTW_SSMI/V001</identifier>
+	<creators>
+		<creator>
+			<creatorName>Jonas, Markus</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Schr&#246;der, Marc</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Schulz, J&#246;rg</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Andersson, Axel</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Bakan, Stephan</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Fennig, Karsten</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Grassl, Hartmut</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Klepp, Christian-Phillip</creatorName>
+		</creator>
+	</creators>
+	<titles>
+		<title>Vertically Integrated Water Vapour from SSM/I</title>
+		<title titleType="Subtitle">Daily / Monthly Means</title> 
+	</titles>
+	<publisher>Satellite Application Facility on Climate Monitoring (CM SAF)</publisher>
+	<publicationYear>2009</publicationYear>
+	<resourceType resourceTypeGeneral="Dataset">grid</resourceType>
+	<sizes>
+        <!-- suggestion by Martin Werscheck, 20120824:
+		<size>6.1 GiB</size>
+        -->
+		<size>6.1 GB</size>
+	</sizes>
+	<formats>
+		<format>NetCDF</format>
+	</formats>
+	<version>1.0</version>
+	<descriptions>
+		<description descriptionType="Abstract">A dataset of vertically integrated water vapour was derived from homogenized SSM/I observations at the Satellite Application Facility on Climate Monitoring (CM&#x00a0;SAF). CM&#x00a0;SAF utilized observations of the Special Sensor Microwave/Imager (SSM/I) flying onboard Defense Meteorological Satellite Program (DMSP) platforms F08, F10, F11, F13, F14 and F15 using data in native SSM/I resolution from the Hamburg Ocean-Atmosphere Parameters and Fluxes from Satellite (HOAPS) data set. The CM&#x00a0;SAF water vapour dataset from SSM/I has global coverage, i.e., within &#x00b1;180&#x00b0; longitude and &#x00b1;80&#x00b0; latitude. The product is only defined over the ice-free ocean surface. This product contains the monthly and daily averages on a regular latitude/longitude grid with a spatial resolution of 0.5&#x00b0; x 0.5&#x00b0; degrees. The temporal coverage of the dataset ranges from July 1987 to August 2006.</description>
+	</descriptions>
+	<cmsaf_datasets>
+		<cmsaf_dataset description="Vertically integrated water vapour (HTW) - daily mean">14445</cmsaf_dataset>
+		<cmsaf_dataset description="Vertically integrated water vapour (HTW) - monthly mean">14443</cmsaf_dataset>
+	</cmsaf_datasets>
+	<cmsaf_documentations>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD)">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_WVPA_HO_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM)">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_WVPA_HO_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_WVPA_HO_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
+	</cmsaf_documentations>
+</resource>

@@ -1,0 +1,19 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix dcmi: <http://purl.org/dc/dcmitype/>
+prefix oa:	<http://www.w3.org/ns/oa#>
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT (count(?anno) AS ?cntRec) ?target ?type (min(?datetime) AS ?minDat) (max(?datetime) AS ?maxDat)
+FROM <http://localhost:3333/privateds/data/submitted>
+WHERE {
+?anno oa:annotatedBy ?s .
+?anno oa:annotatedAt ?datetime .
+?anno oa:hasTarget ?target .
+?target rdf:type dcmi:Dataset .
+?target rdf:type ?type.
+FILTER ( ?datetime > "&timestamp_from;"^^xsd:dateTime )
+FILTER ( ?datetime < "&timestamp_until;"^^xsd:dateTime )
+FILTER(regex(str(?target), "10.5676/EUM_SAF_CM", "i"))
+}
+GROUP BY ?target ?type
+ 

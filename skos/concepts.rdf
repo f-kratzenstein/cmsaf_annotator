@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<title xmlns="http://purl.org/dc/terms/" xml:lang="en">CHARMeVocab</title>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:53:21.628+01:00</created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<topConceptOf xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001">
+	<hasTopConcept xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:55:11.462+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">GreyLiterature</prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#AlgorithmTheoreticalBasisDocument">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#AlgorithmTheoreticalBasisDocument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#AlgorithmTheoreticalBasisDocument">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:55:51.717+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Algorithm Theoretical Basis Document</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">ATBD</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#ProductUserManual">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#ProductUserManual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#ProductUserManual">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:56:28.780+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Product User Manual</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">PUM</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#ValidationReport">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#ValidationReport"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#ValidationReport">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:56:39.258+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Validation Report</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">VR</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#OperationReport">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#OperationReport"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#OperationReport">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:56:56.282+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Operation Report</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">OR</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#Service Message">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#Service Message"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#Service Message">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:58:29.552+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Service Message</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">SM</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#ProductChangeLog">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#ProductChangeLog"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#ProductChangeLog">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:59:08.885+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Product Change Log</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">PCL</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#KnownProductDisruption">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<broader xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#GreyLiterature">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#KnownProductDisruption"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#KnownProductDisruption">
+	<inScheme xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#cscheme000001"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/">fkratzen</creator>
+	<created xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:59:36.870+01:00</created>
+	<prefLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">Known Product Disruption</prefLabel>
+    <altLabel xmlns="http://www.w3.org/2004/02/skos/core#" xml:lang="en">KPD</altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://charme.cems.rl.ac.uk/2014/charme#Service Message">
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#ProductChangeLog"/>
+	<narrower xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://charme.cems.rl.ac.uk/2014/charme#KnownProductDisruption"/>
+</rdf:Description>
+
+</rdf:RDF>

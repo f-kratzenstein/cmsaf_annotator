@@ -1,0 +1,50 @@
+<resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
+	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/TOA_GERB/V001</identifier>
+	<creators>
+		<creator>
+			<creatorName>Clerbaux, Nicolas</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Nevens, Stijn</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Decoster, Ilse</creatorName>
+		</creator>
+	</creators>
+	<titles>
+	  <title>CM SAF TOA Radiation "GERB" dataset - Edition 1</title>
+		<title titleType="Subtitle">Monthly Means / Daily Means / Monthly mean diurnal cycle</title>
+	</titles>
+	<publisher>Satellite Application Facility on Climate Monitoring (CM SAF)</publisher>
+	<publicationYear>2013</publicationYear>
+	<resourceType resourceTypeGeneral="Dataset">grid</resourceType>
+	<!-- 
+	<relatedIdentifiers>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="IsDocumentedBy">10.1016/j.rse.2011.11.016</relatedIdentifier>
+	</relatedIdentifiers>
+	-->
+	<sizes>
+		<size>4.5 GB</size>
+	</sizes>
+	<formats>
+		<format>NetCDF</format>
+	</formats>
+	<version>Edition 1</version>
+	<descriptions>
+		<description descriptionType="Abstract">The CM SAF TOA Radiation "GERB" dataset is a regional dataset of reflected solar and emitted thermal radiation products derived from measurements of the Geostationary Earth Radiation Budget (GERB) onboard the geostationary Meteosat Second Generation satellites. Monthly and daily means, as well as monthly mean of hourly values,  have been compiled over a time period of 7 years starting in February 2004 and ending in January 2011. Results are provided on a sinusoidal equal-area grid with 45 km resolution covering the Meteosat disk and the arctic region.</description>
+	</descriptions>
+	<cmsaf_datasets>
+		<cmsaf_dataset description="TOA Reflected Solar (TRS) - daily mean">20490_20491</cmsaf_dataset>
+		<cmsaf_dataset description="TOA Emitted Thermal (TET) - daily mean">20484_20485</cmsaf_dataset>
+		<cmsaf_dataset description="TOA Reflected Solar (TRS) - monthly mean">20492_20493</cmsaf_dataset>
+		<cmsaf_dataset description="TOA Emitted Thermal (TET) - monthly mean">20486_20487</cmsaf_dataset>
+		<cmsaf_dataset description="TOA Reflected Solar (TRS) - monthly mean diurnal cycle">20494_20495</cmsaf_dataset>
+		<cmsaf_dataset description="TOA Emitted Thermal (TET) - monthly mean diurnal cycle">20488_20489</cmsaf_dataset>
+	</cmsaf_datasets>
+	<cmsaf_documentations>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - TOA Radiation &quot;GERB&quot; dataset">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_RMIB_ATBD_GERB_DS_3.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM) - TOA Radiation &quot;GERB&quot; dataset">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_RMIB_PUM_GERB_DS_3.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report - TOA Radiation &quot;GERB&quot; dataset">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_RMIB_VAL_GERB_DS_3.pdf?__blob=publicationFile</cmsaf_documentation>
+	</cmsaf_documentations>
+
+</resource>

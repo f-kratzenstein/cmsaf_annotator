@@ -1,0 +1,113 @@
+<resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
+	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/CLARA_AVHRR/V001</identifier>
+	<creators>
+		<creator>
+			<creatorName>Karlsson, Karl-G&#246;ran</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Riihel&#228;, Aku</creatorName>
+		</creator>
+		<creator>
+			<creatorName>M&#252;ller, Richard</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Meirink, Jan Fokke</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Sedlar, Joseph</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Stengel, Martin</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Lockhoff, Maarit</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Trentmann, J&#246;rg</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Kaspar, Frank</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Hollmann, Rainer</creatorName>
+		</creator>
+		<creator>
+			<creatorName>Wolters, Erwin</creatorName>
+		</creator>
+	</creators>
+	<titles>
+		<title>CLARA-A1: CM SAF cLouds, Albedo and Radiation dataset from AVHRR data - Edition 1</title>
+		<title titleType="Subtitle">Monthly Means / Daily Means / Pentad Means / Monthly Histograms</title>
+	</titles>
+	<publisher>Satellite Application Facility on Climate Monitoring (CM SAF)</publisher>
+	<publicationYear>2012</publicationYear>
+	<resourceType resourceTypeGeneral="Dataset">grid</resourceType>
+	<relatedIdentifiers>
+		<relatedIdentifier relatedIdentifierType="DOI" relationType="IsDocumentedBy">10.1016/j.rse.2011.11.016</relatedIdentifier>
+	</relatedIdentifiers>
+	<sizes>
+		<size>357 GB</size>
+	</sizes>
+	<formats>
+		<format>NetCDF</format>
+	</formats>
+	<version>Edition 1</version>
+	<descriptions>
+		<description descriptionType="Abstract">The CLARA-A1 dataset is a global dataset of cloud, surface albedo and surface radiation products derived from measurements of the Advanced Very High Resolution Radiometer (AVHRR) onboard the polar orbiting NOAA and Metop satellites. Monthly and daily mean products have been compiled over a time period of 28 years starting in 1982 and ending in 2009. Results are available for individual satellites as well as aggregated for all satellites. Results are provided on two types of grids: one global regular latitude-longitude grid with 0.25 degrees resolution and two equal-area grids covering the polar regions with 25 km resolution (products on the polar grids are restricted to cloud amount and surface albedo). Further extensions, e.g. single- and multi-parameter histograms, and subsets, e.g. daytime-only and night-time only results, are also included.</description>
+	</descriptions>
+	<cmsaf_datasets>
+		<cmsaf_dataset description="Cloud Fractional Cover (CFC) - global daily mean">19764</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Fractional Cover (CFC) - global monthly mean">19842</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Fractional Cover (CFC) - arctic monthly mean">19868</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Fractional Cover (CFC) - antarctic monthly mean">19894</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud radiative effect longwave (CFL) - global monthly mean">20500</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud radiative effect shortwave (CFS) - global monthly mean">20722</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Optical Thickness (COT) - global daily mean">20210</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Optical Thickness (COT) - global monthly mean">20236</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Optical Thickness (COT) - global monthly histogram">20262</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Phase (CPH) - global daily mean">20002</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Phase (CPH) - global monthly mean">20028</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Top level (CTO) - global daily mean">19924</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Top level (CTO) - global monthly mean">19950</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Top level (CTO) - global monthly histogram">19976</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Ice Water Path (IWP) - global daily mean">20366</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Ice Water Path (IWP) - global monthly mean">20392</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Ice Water Path (IWP) - global monthly histogram">20418</cmsaf_dataset>
+		<cmsaf_dataset description="Joint Cloud Property (cloud top pressure and cloud optical thickness) histograms (JCH) - global monthly histogram">20482</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Liquid Water Path (LWP) - global daily mean">20288</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Liquid Water Path (LWP) - global monthly mean">20314</cmsaf_dataset>
+		<cmsaf_dataset description="Cloud Liquid Water Path (LWP) - global monthly histogram">20340</cmsaf_dataset>
+		<cmsaf_dataset description="Surface albedo (SAL) - global pentad mean">20054</cmsaf_dataset>
+		<cmsaf_dataset description="Surface albedo (SAL) - global monthly mean">20132</cmsaf_dataset>
+		<cmsaf_dataset description="Surface albedo (SAL) - arctic pentad mean">20080</cmsaf_dataset>
+		<cmsaf_dataset description="Surface albedo (SAL) - arctic monthly mean">20158</cmsaf_dataset>
+		<cmsaf_dataset description="Surface albedo (SAL) - antarctic pentad mean">20106</cmsaf_dataset>
+		<cmsaf_dataset description="Surface albedo (SAL) - antarctic monthly mean">20184</cmsaf_dataset>
+		<cmsaf_dataset description="Surface Downwelling Longwave radiance (SDL) - global monthly mean">20502</cmsaf_dataset>
+		<cmsaf_dataset description="Surface Incoming Shortwave irradiance (SIS) - global daily mean">20504</cmsaf_dataset>
+		<cmsaf_dataset description="Surface Incoming Shortwave irradiance (SIS) - global monthly mean">20506</cmsaf_dataset>
+		<cmsaf_dataset description="Surface Net Longwave radiance (SNL) - global monthly mean">20508</cmsaf_dataset>
+		<cmsaf_dataset description="Surface Net Shortwave radiance (SNS) - global monthly mean">20510</cmsaf_dataset>
+		<cmsaf_dataset description="Surface Outgoing Longwave radiance (SOL) - global monthly mean">20512</cmsaf_dataset>
+		<cmsaf_dataset description="Surface radiation budget (SRB) - global monthly mean">20514</cmsaf_dataset>
+	</cmsaf_datasets>
+	<cmsaf_documentations>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - GAC Surface Radiation, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_GAC_RAD_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+<!--
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - AVHRR GAC Surface Albedo, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_FMI_ATBD_GACSAL_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - AVHRR GAC cloud products, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_GAC_CLD_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - Cloud Physical Products AVHRR">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_KNMI_ATBD_CPP_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - CM-SAF Product CM-15 and CM-16 Cloud Top (Temperature, Pressure, Height) from AVHRR">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_SMHI_ATBD_CTO_AVHRR_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Algorithm Theoretical Basis Document (ATBD) - Joint Cloud property Histogram products AVHRR / SEVIRI">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_SMHI_ATBD_JCH_1.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM) - AVHRR GAC Surface Radiation Products, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_GAC_RAD_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM) - AVHRR GAC Surface Albedo, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_FMI_PUM_GACSAL_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Product User Manual (PUM) - AVHRR GAC cloud products, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_GAC_CLD_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report - AVHRR GAC cloud products, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_SMHI_VAL_GAC_CLD_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report - AVHRR GAC Surface Radiation, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_GAC_RAD_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+    <cmsaf_documentation description="Validation Report - AVHRR GAC Surface Albedo, Edition 1">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_FMI_VAL_GACSAL_1_2.pdf?__blob=publicationFile</cmsaf_documentation>
+
+	    <cmsaf_documentation description="Karlsson K.-G., Riihel&#228;, A., M&#252;ller, R., Meirink, J. F., Sedlar, J., Stengel, M., Lockhoff, M., Trentmann, J., Kaspar, F., Hollmann R., Wolters, E.: CLARA-A1: the CM SAF cloud, albedo and radiation dataset from 28 yr of global AVHRR data, Atmos. Chem. Phys. Discuss., 13, 935-982, doi:10.5194/acpd-13-935-2013, 2013.">http://dx.doi.org/10.5194/acpd-13-935-2013</cmsaf_documentation>
+		<cmsaf_documentation description="Riihel&#228;, A., Manninen, T., Laine, V., Andersson, K., and Kaspar, F., 2012, CLARA-SAL: a global 28-yr timeseries of Earth's black-sky surface albedo, Atmos. Chem. Phys. Discuss., 12, 25573-25615, doi:10.5194/acpd-12-25573-2012.">http://dx.doi.org/10.5194/acpd-12-25573-2012</cmsaf_documentation>
+	-->
+	</cmsaf_documentations>
+</resource>
