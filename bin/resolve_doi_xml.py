@@ -13,7 +13,7 @@ logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
 
 #List of directories we want to use
 dirs = {
-    "data_dir"  : "/home/f-kratzenstein/Workspaces/DWD/CHARMe/WP6/WP610/bitbucket/cmsaf-annotator/stage"
+    "data_dir"  : "../stage"
 }
 
 #List of namespace we need to register in order to parse and query the atom feed
@@ -34,14 +34,19 @@ xpaths = {
     "test"  :   "/RDF/Description/title/text()"
 }
 
-
-def get_doi_xml(doi):
-    logging.debug("get_doi_xml for: %s" % doi)
-    doi_xml = "../stage/%s.xml" % doi.replace("/","_")
+def resolve(doi):
+    logger.debug("get_doi_xml for: %s" % doi)
+    #doi_xml = "../stage/%s.xml" % doi.replace("/","_")
+    doi_xml = os.path.join(dirs["data_dir"],doi.replace("/","_")+".xml")
     status = subprocess.call(["./resolve_doi.sh", doi, doi_xml])
-    logging.debug("status: %s" % status)
+    logger.debug("status: %s" % status)
 
     return doi_xml
+
+def get_doi_xml(doi, path):
+
+   dirs["data_dir"] = path
+   return resolve(doi)
 
 def getXPathValue(ifh, xpath):
     logging.debug("get_from %s xpath: %s" % (ifh, xpaths[xpath]))
@@ -58,7 +63,7 @@ def getXPathValue(ifh, xpath):
 
     else:
        rv = "uups, no value found !"
-    logging.debug("doi value: %s" % rv)
+    logger.debug("doi value: %s" % rv)
 
     return rv
 
@@ -69,34 +74,34 @@ def parse(ifh):
     for namespace in namespaces:
          xp.xpathRegisterNs(namespace, namespaces[namespace])
 
-    logging.debug("xpaths[title]: %s" % xpaths["title"])
+    logger.debug("xpaths[title]: %s" % xpaths["title"])
     doi_title = xp.xpathEval(xpaths["title"])
 
     if doi_title.__len__()>0:
         logging.debug("doi title: %s" % doi_title[0].__str__())
     else:
-        logging.warn("uups, no title found !")
+        logger.warn("uups, no title found !")
 
-    logging.debug("xpaths[about]: %s" % xpaths["about"])
+    logger.debug("xpaths[about]: %s" % xpaths["about"])
     doi_uri = xp.xpathEval(xpaths["about"])
 
     if doi_uri.__len__()>0:
-        logging.debug("doi_about title: %s" % doi_uri[0].__str__())
+        logger.debug("doi_about title: %s" % doi_uri[0].__str__())
     else:
-        logging.warn("uups, no uri found !")
+        logger.warn("uups, no uri found !")
 
     xp.xpathFreeContext()
 
 
 def main(arguements):
 
-    logging.debug("called module with arguements:  %s" % arguements)
-    logging.debug("data_dir: %s" % dirs["data_dir"])
+    logger.debug("called module with arguements:  %s" % arguements)
+    logger.debug("data_dir: %s" % dirs["data_dir"])
 
     try:
         opts, args = getopt.getopt(arguements, "i:", [ "inputDOI="])
-        logging.debug("opts: %s" % opts)
-        logging.debug("args: %s" % args)
+        logger.debug("opts: %s" % opts)
+        logger.debug("args: %s" % args)
 
     except getopt.GetoptError:
         sys.exit(2)
@@ -105,16 +110,16 @@ def main(arguements):
         if opt in ("-h", "--help"):
             sys.exit(1)
         elif opt in ("-i", "--inputDOI"):
-            logging.debug("--inputDOI: %s" %arg)
+            logger.debug("--inputDOI: %s" %arg)
             # initialize
             global doi
             doi=arg
 
     #file_handle = os.path.join(dirs["data_dir"],inputFile)
-    logging.debug("handle doi : %s" % doi)
+    logger.debug("handle doi : %s" % doi)
     doix = get_doi_xml(doi)
-    logging.debug("doix: %s" % doix)
-    logging.debug("doi title: %s" % getXPathValue(doix,"title"))
+    logger.debug("doix: %s" % doix)
+    logger.debug("doi title: %s" % getXPathValue(doix,"title"))
 
     #parse(file_handle)
 

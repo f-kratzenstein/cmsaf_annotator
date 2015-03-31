@@ -6,6 +6,7 @@ import sys
 import getopt
 import datetime
 import subprocess
+import errno
 
 import os
 
@@ -63,6 +64,17 @@ service_config = {
 }
 
 def csv2ttl(ifh, delimiter=config_props["delimiter"]):
+    """
+    converting the csv into a turtle file
+
+    Keywords arguements:
+
+    ifh             --  file we want to convert
+    delimiter       --  the delimiter used in the csv-file
+
+    Keyword return:
+    file_handles    --  handles of ttl-file we've created
+    """
 
     with open(ifh, 'rb') as csvfile:
         dialect = csv.Sniffer().sniff(csvfile.read(1024))
@@ -72,7 +84,7 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
                                 dialect=dialect,
                                 delimiter=delimiter,
                                 )
-
+        #handles of ttl-file we'll create
         file_handles = []
 
         #just for readability when writing the turtle file
@@ -83,13 +95,11 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
         dcmi    = Namespace(namespaces["dcmi"])
         cnt     = Namespace(namespaces["cnt"])
 
-
-
         #looping through the csv-file and transforming each row to an turtle-file
         next(reader)
         logger.debug("fieldnames: {0}".format(reader.fieldnames))
-        for row in reader:
 
+        for row in reader:
             try:
                 logger.debug("row:{0}".format(row))
                 if config_props["doi_org_prefix"] not in row["CitedEntity"] :
@@ -98,11 +108,14 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
                 stripped_doi = row["CitingEntity"].replace(config_props["doi_org_prefix"],"").replace("/","_")
                 logger.debug("stripped doi: %s" % stripped_doi)
                 #get the title of the doi
-                citing_entity_xml = resolve_doi_xml.get_doi_xml(row["CitingEntity"].replace(config_props["doi_org_prefix"],""),);
+                citing_entity_xml = resolve_doi_xml.get_doi_xml(row["CitingEntity"].replace(config_props["doi_org_prefix"],""),
+                                                                config_props["dir_stage"]
+                                                                );
+
                 citing_entity_title = resolve_doi_xml.getXPathValue(citing_entity_xml, "title")
                 #citing_entity_title="some value as dx.doi.org is dead!"
 
-                ofh = open(os.path.join(config_props["dir_stage"],stripped_doi+".ttl"),"w+")
+                ofh = open(os.path.join(config_props["dir_data"],stripped_doi+".ttl"),"w+")
 
                 logger.debug("create annotation as citation ...")
                 graph = Graph()
@@ -158,8 +171,15 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
     return file_handles
 
 def curling(fh):
-    #creating a new shell-script-file in the staging area
-    fh_curl = open(os.path.join(config_props["dir_stage"],"curling.sh"),"w+")
+    """
+    creating a shell-script-file
+
+    Keywords arguements:
+    fh             --  file with an annotation to transfer to the charme node
+    """
+
+    #creating a shell-script-file
+    fh_curl = open(os.path.join(config_props["dir_data"],"curling.sh"),"w+")
     fh_curl.write("#!/bin/sh \n")
 
     #writing the shell-script-commands for each *.ttl in the file_handles
@@ -179,8 +199,8 @@ def curling(fh):
 
     #running the just created shell script
     subprocess.call(["chmod", "+x", fh_curl.name])
-    status = subprocess.call([fh_curl.name])
-    logger.debug("status: %s" % status)
+    #status = subprocess.call([fh_curl.name])
+    #logger.debug("status: %s" % status)
 
 def get_timestamp():
     return "\"%s\"" % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
@@ -190,9 +210,20 @@ def init(working_directory):
     initializing the base structure and the configuration properties
     """
     config_props["dir_wrk"] = working_directory
-    config_props["dir_stage"]  = os.path.join(config_props["dir_wrk"],"data/n3")
+    config_props["dir_data"]  = os.path.join(config_props["dir_wrk"],"data/n3")
+    mkdir(config_props["dir_data"])
+
+    config_props["dir_stage"] = os.path.join(config_props["dir_wrk"],"stage")
+    mkdir(config_props["dir_stage"])
+
     config_props["dir_bin"]  = os.path.join(config_props["dir_wrk"],"bin")
     service_config["service_file"] = os.path.join(config_props["dir_bin"],service_config["service_file"])
+def mkdir(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
 
 def setConfigProperty(prop, val):
     """
@@ -203,11 +234,11 @@ def setConfigProperty(prop, val):
 def usage():
     print "\nThis is the usage function\n"
     print 'Usage: ' + sys.argv[0] + ' i <--inputFile1> -w <--workingDir> -d <--delimiter> -l <--loglevel>'
-    print "\n\t[*]\t-i|--inputFile\t name of the  inputFile,"
-    print "\n\t\t must be a csv-file, with at least columns CitingEntity, CitedEntity, Motivation"
-    print '\n\t[*]\t-w|--working_dir\tbase directory of the charme_annotator containing the referenced subfolders like bin, stage, data,  ...'
-    print "\n\t[*]\t-d|--delimiter\t the character used as a field-delimiter in the inputFile "
-    print '\n\t []\t-l|--logLevel\t logging level default=10 DEBUG=10 INFO=20 WARN=30 ERROR=40 CRITICAL=50'
+    print "\t[*]\t-i|--inputFile\tname of the  inputFile, must be a csv-file,"
+    print "\t\t\t\twith at least columns CitingEntity, CitedEntity, Motivation"
+    print '\t[*]\t-w|--working_dir\tbase directory of the charme_annotator containing the referenced subfolders like bin, stage, data,  ...'
+    print '\t[*]\t-d|--delimiter\tthe character used as a field-delimiter in the inputFile'
+    print '\t []\t-l|--logLevel\tlogging level default=10 DEBUG=10 INFO=20 WARN=30 ERROR=40 CRITICAL=50'
 
 def main(arguements):
 
@@ -240,7 +271,6 @@ def main(arguements):
             logger.debug("--logLevel: %s" %arg)
             logger.setLevel(int(arg))
 
-
     logger.info("%s exists: %s" % (ifh, os.path.isfile(ifh)))
     logging.debug("config_props: %s" % config_props)
 
@@ -251,7 +281,6 @@ def main(arguements):
         curling(file_handles)
     else :
         logger.warn("failed to run due to missing inputFile: %s" % ifh)
-
 
 if __name__ == '__main__':
     main(sys.argv[1:])

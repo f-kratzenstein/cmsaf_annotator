@@ -1,6 +1,5 @@
 __author__ = 'fkratzen'
 
-
 import logging
 import sys
 import rdflib
@@ -94,7 +93,7 @@ def initFileHandle(ifh):
 
     Keywords arguements:
 
-    ifh        --  filename we want to copy
+    ifh        --  file we want to copy
     """
 
     shutil.copy(ifh,configs["charme.doi.dir"])
@@ -103,7 +102,7 @@ def initFileHandle(ifh):
     if os.path.isfile(fh):
         return fh
     else :
-        logger.error("failed to copy inputFile %s to local dir %s!" %s (ifh,configs["charme.doi.dir"]))
+        logger.error("failed to copy inputFile %s to local dir %s!" % (ifh,configs["charme.doi.dir"]))
         sys.exit(2)
 
 

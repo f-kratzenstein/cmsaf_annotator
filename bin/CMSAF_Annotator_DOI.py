@@ -180,6 +180,8 @@ def init(working_directory):
     logger.debug("dirs: %s" % dirs)
     service_config["service_file"] = os.path.join(dirs["bin_dir"],service_config["service_file"])
 
+
+
 def curling(fh):
     """
     creating and executing a shell-script to transfer the annotations to the charme node
