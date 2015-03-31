@@ -5,7 +5,7 @@ source ./CHARMeService.cfg
 #setting the default values
 CHARME_SERVER=${CHARME_NODE}
 #fkratzen
-OA_TOKEN=${CLIENT_ID}
+OA_TOKEN=${TOKEN}
 
 #SERVICE:(search|suggest|advance_status)
 SERVICE=search
