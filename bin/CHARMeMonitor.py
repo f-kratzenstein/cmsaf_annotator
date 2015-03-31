@@ -11,6 +11,7 @@ import libxml2
 import libxslt
 
 import webbrowser
+import ConfigParser
 
 logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)s', datefmt='%Y-%m-%dT%H:%M:%S%Z', level=logging.INFO)
 logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
@@ -19,10 +20,11 @@ configs = {
     "tokenizer"         : ";",
     "assigner"          : "=",
     "timestamp"         : time.mktime(datetime.datetime.now().timetuple()).__trunc__(),
-    "charme_uri"        : "https://charme-test.cems.rl.ac.uk/sparql",
-    "xslt.overview"     : "./tmpl/charme_sparql_overview.xsl",
-    "dir.output"        : "./data",
-    "dir.templates"     : "./tmpl"
+    "charme.uri"        : "https://charme-test.cems.rl.ac.uk",
+    "xslt.overview"     : "../monitor/xslt/charme_sparql_overview.xsl",
+    "dir.output"        : "../monitor/data",
+    "sparql.endpoint"   : "/sparql",
+    "charme.sparql.endpoint" : "",
 }
 
 #list of available params in the sparql query templates with their default values;
@@ -71,10 +73,10 @@ def curl(queryFile):
     global status
     rfh = "{0}/{1}_result.xml".format(configs["dir.output"], configs["timestamp"])
 
-    fh_curl = open("curl_charme_sparql.sh", "w+")
+    fh_curl = open("../monitor/curl_charme_sparql.sh", "w+")
     fh_curl.write("#!/bin/sh \n")
     fh_curl.write("curl -H 'Accept: application/sparql-results+xml' --data-urlencode 'query@{0}' {1} > {2}".format(
-        queryFile.name,configs["charme_uri"],rfh
+        queryFile.name,configs["charme.sparql.endpoint"],rfh
     ))
     fh_curl.close()
     logger.debug("fh_curl: {0}".format(fh_curl.name))
@@ -91,12 +93,15 @@ def curl(queryFile):
 
 def transform(resultFile,styleSheet):
     logger.debug("running the xslt ....")
-    rfh =  rfh = "{0}/{1}_result.html".format(configs["dir.output"], configs["timestamp"])
+    rfh = "{0}/{1}_result.html".format(configs["dir.output"], configs["timestamp"])
+    logger.debug("result file:{0}".format(rfh.title()))
 
     styleSheet = libxml2.parseFile(configs["xslt.overview"])
     style = libxslt.parseStylesheetDoc(styleSheet)
+    logger.debug("...xslt parsed!")
 
     doc = libxml2.parseFile(resultFile)
+    logger.debug("...xml parsed!")
     #result = style.applyStylesheet(doc, None)
     result = style.applyStylesheet(doc, xslt_params)
     style.saveResultToFilename(rfh, result, 0)
@@ -151,6 +156,14 @@ def main(args):
             elif opt in ("-l", "--loglevel"):
                 logger.debug("--logLevel: %s" %arg)
                 logger.setLevel(int(arg))
+
+        cfgp = ConfigParser.ConfigParser()
+        cfgp.readfp(open("CHARMeService.cfg"))
+
+        configs["charme.uri"] = cfgp.get("CHARMe","CHARME_NODE")
+        configs["charme.sparql.endpoint"] = "{0}{1}".format(configs["charme.uri"],configs["sparql.endpoint"])
+        logger.debug("charme uri:{0}".format(configs["charme.uri"]))
+        logger.debug("charme.sparql.endpoint:{0}".format(configs["charme.sparql.endpoint"]))
 
         if (ifh ==""):
             logger.warn("missing input param: inputFile")

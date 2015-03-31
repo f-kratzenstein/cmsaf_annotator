@@ -1,2 +1,2 @@
 #!/bin/sh 
-curl -H 'Accept: application/sparql-results+xml' --data-urlencode 'query@./data/1425399185.sparql' https://charme-test.cems.rl.ac.uk/sparql > ./data/1425399185_result.xml
+curl -H 'Accept: application/sparql-results+xml' --data-urlencode 'query@../monitor/data/1427796488.sparql' https://charme.cems.rl.ac.uk/sparql > ../monitor/data/1427796488_result.xml
