@@ -9,11 +9,11 @@ import subprocess
 import errno
 
 import os
-
 from rdflib import Graph, URIRef,  Literal
 from rdflib.namespace import Namespace, RDF, DC
 
 import resolve_doi_xml
+
 
 logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)s', datefmt='%Y-%m-%dT%H:%M:%S%Z', level=logging.INFO)
 logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
@@ -218,6 +218,7 @@ def init(working_directory):
 
     config_props["dir_bin"]  = os.path.join(config_props["dir_wrk"],"bin")
     service_config["service_file"] = os.path.join(config_props["dir_bin"],service_config["service_file"])
+
 def mkdir(path):
     try:
         os.makedirs(path)

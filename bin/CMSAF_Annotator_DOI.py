@@ -1,19 +1,21 @@
 __author__ = 'f-kratzenstein'
 
-import libxml2
 import logging
 import sys
 import getopt
 import datetime
 import subprocess
-import os
 import glob
 import uuid
+import errno
 
+import libxml2
+import os
 from rdflib import Graph
 from rdflib import Namespace
 from rdflib import URIRef,  Literal
-from rdflib.namespace import RDF, FOAF, SKOS, DC, DCTERMS
+from rdflib.namespace import RDF, DC
+
 
 logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)s', datefmt='%Y-%m-%dT%H:%M:%S%Z', level=logging.INFO)
 logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
@@ -174,8 +176,7 @@ def init(working_directory):
     dirs["bin_dir"]     = os.path.join(dirs["wrk_dir"],"bin")
     dirs["doi_dir"]     = os.path.join(dirs["wrk_dir"],"doi")
     dirs["n3_dir"]      = os.path.join(dirs["doi_dir"],"n3")
-    dirs["jsonld_dir"]  = os.path.join(dirs["doi_dir"],"json_ld")
-    dirs["rdf_dir"]     = os.path.join(dirs["doi_dir"],"rdf")
+    mkdir(dirs["n3_dir"])
     dirs["skos_dir"]    = os.path.join(dirs["wrk_dir"],"skos")
     logger.debug("dirs: %s" % dirs)
     service_config["service_file"] = os.path.join(dirs["bin_dir"],service_config["service_file"])
@@ -200,6 +201,13 @@ def curling(fh):
     subprocess.call(["chmod", "+x", fh_curl.name])
     status = subprocess.call([fh_curl.name])
     logger.debug("status: %s" % status)
+
+def mkdir(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
 
 def usage():
     print "\nThis is the usage function\n"
