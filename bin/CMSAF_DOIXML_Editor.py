@@ -5,10 +5,10 @@ import sys
 import getopt
 import subprocess
 import shutil
+import os
 
 import rdflib
 import rdflib.plugins.sparql as sparql
-import os
 import libxml2
 import libxslt
 
@@ -18,13 +18,12 @@ logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)
                     level=logging.DEBUG)
 logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
 
-
 configs = {
     "cmsaf.wui.doi.dir" :   "/cmsaf/cmsaf-ops2/CMSAF_QM/png/doi",
     "xpath.cmsaf_doc"   :   "/datacite:resource/datacite:cmsaf_documentations/datacite:cmsaf_documentation",
     "charme.local.vocab":   "../skos/CHARMe_vocab.xml",
     "charme.doi.dir"    :   "../doi",
-    "charme.doi.xslt"   :   "../doi/xslt/cmsaf_doi2html.xsl",
+    "charme.doi.xslt"   :   "../doi/xslt/cmsaf_doi2html.xml",
     "charme.uri.vocab"  :   'https://charme.cems.rl.ac.uk/vocab',
     "sparql.query"      :   """
                             select distinct ?s ?o
@@ -85,11 +84,12 @@ def initGraph(skos = configs["charme.local.vocab"]):
 
     if not os.path.isfile(skos):
         #download the skos
+        logger.debug("download new skos:{0}".format(skos))
         curl(skos)
 
     graph = rdflib.Graph()
     graph.parse(skos)
-    logger.debug("charme_vocab: %s \n" % graph.serialize())
+    #logger.debug("charme_vocab: %s \n" % graph.serialize())
 
     return graph
 
@@ -124,6 +124,7 @@ def queryGraph(g, q , b):
     rdf resultset of the query
     """
     pq = sparql.prepareQuery(q)
+    logger.debug("run sparql query:{0}".format(pq))
     rdf = g.query(q, initBindings = b)
     return rdf
 
@@ -176,7 +177,7 @@ def addDocTypeRdfUriAttr(ifh, graph):
     """
 
     res = libxml2.parseFile(ifh)
-    logger.debug("xml-content: %s \n" % res.serialize())
+    #logger.debug("xml-content: %s \n" % res.serialize())
 
     xp = res.xpathNewContext()
     for namespace in namespaces:
@@ -190,7 +191,7 @@ def addDocTypeRdfUriAttr(ifh, graph):
 
         doc.setProp("docTypeRdfUri", findMatchingUri(graph,descr))
 
-    logger.debug("xml-content modified: %s \n" % res.serialize())
+    #logger.debug("xml-content modified: %s \n" % res.serialize())
 
     fh = open(ifh,"w+")
     fh.write(res.serialize())

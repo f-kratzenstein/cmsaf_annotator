@@ -1,12 +1,13 @@
 __author__ = 'f-kratzenstein'
 
 import sys
-
-import libxml2
 import logging
 import os
 import getopt
 import subprocess
+import errno
+
+import libxml2
 
 
 logging.basicConfig(format='[%(levelname)s].[%(asctime)s]: %(message)s', datefmt='%Y-%m-%dT%H:%M:%S%Z', level=logging.DEBUG)
@@ -21,11 +22,6 @@ namespaces = {
 #List of xpaths we need in order to retrieve the information of interest from the atom feed
 xpaths = {
     "annotation_id": "/atom:feed/atom:entry/atom:id/text()"
-}
-
-#List of directories we want to use
-dirs = {
-    "data_dir": "/home/f-kratzenstein/Workspaces/DWD/CHARMe/WP6/WP610/bitbucket/cmsaf-annotator/test"
 }
 
 #List of CHARMeService call parameter
@@ -82,11 +78,20 @@ def curling(fh):
     subprocess.call(["chmod", "+x", fh_curl.name])
     status = subprocess.call([fh_curl.name])
     logger.debug("status: %s" % status)
+
+def mkdir(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+
 def init(arg):
-    global dirs
+    #global dirs
     dirs["wrk_dir"]     = arg
     dirs["bin_dir"]     = os.path.join(dirs["wrk_dir"],"bin")
     dirs["stage_dir"]     = os.path.join(dirs["wrk_dir"],"stage")
+    mkdir(dirs["stage_dir"])
     logger.debug("dirs: %s" % dirs)
     service_config["service_file"] = os.path.join(dirs["bin_dir"],service_config["service_file"])
 

@@ -1,5 +1,22 @@
 #!/bin/sh
 
+usage() {
+cat <<EOM
+   Usage of $(basename $0) :
+   [*] -n=|--node=     CHARMe Node to connect to (provided through ./CHARMeService.cfg)
+   [*] -t=|--token=    OA_TOKEN Authentication token to connect to the CHARMe Node  (provided through ./CHARMeService.cfg)
+   [*] -u=|--uri=      URI of the DOI
+   []  -s=|--service=  the service to call at CHARMe Node [search*|suggest|advance_status|insert/annoation]
+   []  -g=|--graph=    the graph at the CHARMe Node to run the service against [submitted*|retired|invalid]
+   []  -i=|--input=    filename with data for the services [advance_status|insert/annoation]
+   []  -o=|--output=   filename to store the reponse of the server into
+   []  -f=|--format=   encoding format of the input data
+
+EOM
+    exit 0
+}
+
+#reading the default values
 source ./CHARMeService.cfg
 
 #setting the default values
@@ -12,10 +29,6 @@ SERVICE=search
 
 #GRAPH:(submitted|retired|invalid)
 GRAPH=submitted
-
-#DOI_URI:   URI of the target DOI
-#IDATA: input file
-#ODATA: output file
 
 #defining the exit codes
 E_BADARGS=85
@@ -49,8 +62,12 @@ case $i in
     -f=*|--format=*)
         FORMAT="${i#*=}"
         ;;
+    -h|--help)
+        usage
+        ;;
     *)
      echo "unknown arguement: ${i}"
+     usage
 esac
 
 done
@@ -91,4 +108,3 @@ fi
 echo "...done!"
 
 exit 0
-
