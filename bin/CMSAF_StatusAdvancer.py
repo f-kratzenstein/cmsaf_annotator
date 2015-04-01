@@ -39,12 +39,13 @@ template_json = "{\"annotation\" : \"%s\" , \"toState\" : \"%s\"} \n"
 #List of directories to use
 dirs        = dict()
 
-#List of json file to push to the server
-file_handles = []
+
 
 
 def xml2json(ifh, toState):
     logger.debug("xml2json(%s)..." % ifh)
+    #List of json file to push to the server
+    file_handles = []
     res = libxml2.parseFile(ifh)
     xp = res.xpathNewContext()
 
@@ -62,6 +63,8 @@ def xml2json(ifh, toState):
         json.write(template_json % (annotation_id.__str__(), toState ))
         json.close()
         file_handles.append(json.name)
+
+    return file_handles
 
 def curling(fh):
     fh_curl = open(os.path.join(dirs["stage_dir"],"curling.sh"),"w+")
@@ -138,7 +141,7 @@ def main(arguements):
     file_handle = os.path.join(dirs["stage_dir"], inputFile)
 
     #creating the json-files
-    xml2json(file_handle, toState)
+    file_handles = xml2json(file_handle, toState)
 
     logger.debug ("annotation-file(s) to insert: %s" % file_handles)
     #writing a shell script for transferring the json-files to the charme_node
