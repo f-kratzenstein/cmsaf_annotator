@@ -2,14 +2,16 @@ __author__ = 'fkratzen'
 
 import logging
 import sys
+import getopt
+import subprocess
+import shutil
+
 import rdflib
 import rdflib.plugins.sparql as sparql
-import getopt
 import os
-import subprocess
 import libxml2
 import libxslt
-import shutil
+
 
 logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)s',
                     datefmt='%Y-%m-%dT%H:%M:%S%Z',
@@ -31,12 +33,16 @@ configs = {
                             }
                             """,
     "sparql.binding.prefLabel"  : rdflib.URIRef("http://www.w3.org/2004/02/skos/core#prefLabel"),
-    "sparql.binding.rdfLabel"   : rdflib.URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+    # "sparql.binding.rdfLabel"   : rdflib.URIRef("http://www.w3.org/2000/01/rdf-schema#label"),
+    "sparql.binding.rdfLabel": rdflib.URIRef("http://www.w3.org/2004/02/skos/core#notation"),
 }
 
 #List of namespaces/prefixes we have to use
 namespaces = {
     "datacite"   :   "http://datacite.org/schema/kernel-{0}",
+    "xsl": "http://www.w3.org/1999/XSL/Transform",
+    "default": "http://www.w3.org/1999/xhtml",
+
 }
 
 datacite_xsd_version = 3
@@ -194,6 +200,8 @@ def transform(doi_xml, xslt):
     rfh = doi_xml.replace('.xml','.html')
 
     styleSheet = libxml2.parseFile(xslt)
+    styleSheet.getRootElement().newNs(namespaces["datacite"], "datacite")
+
     style = libxslt.parseStylesheetDoc(styleSheet)
 
     doc = libxml2.parseFile(doi_xml)
@@ -207,8 +215,9 @@ def transform(doi_xml, xslt):
 
 def usage():
   print "\nThis is the usage function\n"
-  print 'Usage: '+sys.argv[0]+' -i -l -h'
+  print 'Usage: ' + sys.argv[0] + ' -i -l -h -d'
   print '\t[*]\t-i|--inputFile\ta cmsaf_wui_doi.xml file to be processed/transformed '
+  print '\t[]\t-d|--datacite_version\tversion of the datacite-xml-schema; default 3'
   print '\t[]\t-l|--loglevel\tlogging level default=logging.INFO (DEBUG=10 INFO=20 WARN=30 ERROR=40 CRITICAL=50)'
   print '\t[]\t-h|--help\tdisplaying this usage info'
 
@@ -216,7 +225,7 @@ def main(args):
 
     logger.debug("called module with arguements:  %s" % args)
     try:
-        opts, args = getopt.getopt(args, "i:l:h:", [ "inputFile=","loglevel=","help"])
+        opts, args = getopt.getopt(args, "i:d:l:h:", ["inputFile=", "datacite_version", "loglevel=", "help"])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -228,6 +237,10 @@ def main(args):
             elif opt in ("-i", "--inputFile"):
                 logger.debug("--inputFile: %s" %arg)
                 ifh= arg
+            elif opt in ("-d", "--datacite_version"):
+                logger.debug("--datacite_version: %s" % arg)
+                global datacite_xsd_version
+                datacite_xsd_version = arg
             elif opt in ("-l", "--loglevel"):
                 logger.debug("--loglevel: %s" %arg)
                 logger.setLevel(arg)

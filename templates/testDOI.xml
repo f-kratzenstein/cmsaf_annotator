@@ -34,8 +34,14 @@
 	
 	</cmsaf_datasets>
 	<cmsaf_documentations>
-    <!--<cmsaf_documentation description="Algorithm Theoretical Baseline Document (ATBD)" docTypeRdfUri="">http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_DAL_1.pdf?__blob=publicationFile</cmsaf_documentation>-->
-    <cmsaf_documentation description="Product User Manual (PUM)" docTypeRdfUri="http://purl.org/voc/charme#ProductUserManual">http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_DAL_RAD_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
-    <cmsaf_documentation description="Validation Report" docTypeRdfUri="http://purl.org/voc/charme#ValidationReport">http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_DAL_RAD_1_1.pdf?__blob=publicationFile</cmsaf_documentation>
-	</cmsaf_documentations>
+        <cmsaf_documentation description="Algorithm Theoretical Baseline Document (ATBD)">
+            http://www.cmsaf.eu/EN/Documentation/Documentation/ATBD/pdf/SAF_CM_DWD_ATBD_DAL_1.pdf?__blob=publicationFile
+        </cmsaf_documentation>
+        <cmsaf_documentation description="Product User Manual (PUM)">
+            http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_DAL_RAD_1_1.pdf?__blob=publicationFile
+        </cmsaf_documentation>
+        <cmsaf_documentation description="Validation Report">
+            http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_DAL_RAD_1_1.pdf?__blob=publicationFile
+        </cmsaf_documentation>
+    </cmsaf_documentations>
 </resource>
