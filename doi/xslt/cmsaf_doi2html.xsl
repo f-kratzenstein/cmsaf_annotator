@@ -6,6 +6,7 @@ the datacite namespace will be set programmatically. please don't add it to this
 as it will break the routines using this file.
 -->
 <xsl:stylesheet version="1.0"
+                xmlns:default="http://www.w3.org/1999/xhtml"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 exclude-result-prefixes="datacite xsl default"
         >
