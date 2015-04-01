@@ -36,13 +36,13 @@ definedFieldNames = ["CitingEntity",
 
 #List of namespaces/prefixes we have to use
 namespaces = {
-    "charme":       "http://purl.org/spar/charme",
+    "charme":       "http://purl.org/spar/charme/",
     "cito"  :       "http://purl.org/spar/cito/",
     "cnt"   :       "http://www.w3.org/2011/content#" ,
     "dce"   :       "http://purl.org/dc/elements/1.1/",
     "dct"   :       "http://purl.org/dc/terms/",
     "dcmi"  :       "http://purl.org/dc/dcmitype/",
-    "doi"   :       "http://datacite.org/schema/kernel-2.2",
+    #"doi"   :       "http://datacite.org/schema/kernel-2.2",
     "fabio" :       "http://purl.org/spar/fabio/",
     "foaf"  :       "http://purl.org/foaf",
     "oa"    :       "http://www.w3.org/ns/oa#",
@@ -131,8 +131,7 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
                 graph.add((subject, oa.hasTarget, URIRef(row["CitedEntity"])))
                 graph.add((subject, oa.hasBody, charme.bodyID))
                 graph.add((subject, oa.hasBody, URIRef(row["CitingEntity"])))
-                #graph.add((subject, oa.annotatedBy, URIRef(config_props["author_id"])))
-                #graph.add((subject, oa.annotatedAt, Literal(get_timestamp())))
+
 
                 #creating the body
                 subject = URIRef(charme.bodyID)

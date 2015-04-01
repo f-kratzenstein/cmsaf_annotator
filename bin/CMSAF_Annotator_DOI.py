@@ -26,25 +26,9 @@ datacite_xsd_version = "2.2"
 #List of directories to use
 dirs        = dict()
 
-#OpenAnnotation Author properties information
-oa_author_props = {
-    "ou_uri": "http://cmsaf-preview.service.bvbs.bund.de",
-    "name"  : "cmsaf@dwd",
-    "email" : "mailto:cmsaf_uhd@dwd.de",
-    "token" : "9902021f9048b9653c7bddb5532f22dbb39a73d3"
-}
-
-#CHARMe Software Agent properties
-oa_agent_props = {
-    "name"      :   "CMSAF CHARMe PyAnnotator",
-    "version"   :   "v0.1",
-    "agentId"   :   "",
-}
-
-
 #List of namespaces/prefixes we have to use
 namespaces = {
-    "chnode":   "https://charme-test.cems.rl.ac.uk/",
+    "charme":   "http://purl.org/spar/charme/",
     "cito"  :   "http://purl.org/spar/cito/",
     "cnt"   :   "http://www.w3.org/2011/content#" ,
     "dce"   :   "http://purl.org/dc/elements/1.1/",
@@ -93,7 +77,7 @@ def xml2rdf(ifh, rdf_handles):
     handling the doi-xml-file and writing the annotations into turtle-files
     """
     oa      = Namespace(namespaces["oa"])
-    charme  = Namespace(namespaces["chnode"])
+    charme  = Namespace(namespaces["charme"])
     cito    = Namespace(namespaces["cito"])
     fabio   = Namespace(namespaces["fabio"])
     dcmi    = Namespace(namespaces["dcmi"])
@@ -127,35 +111,42 @@ def xml2rdf(ifh, rdf_handles):
         citingEntity    = URIRef(doc.get_content().strip())
 
         logger.debug("create annotation as citation ...")
-        subject = charme.annoID
+        #the OAnnotation
+        subject = URIRef(charme.annoID)
         graph.add((subject, RDF.type, oa.Annotation))
-        #graph.add((subject, oa.annotatedBy, Literal(oa_author_props["ou_uri"])))
-        #graph.add((subject, RDF.type, cito.CitationAct))
+        graph.add((subject, RDF.type, cito.CitationAct))
+        graph.add((subject, cito.hasCitationCharacterization, cito.describes))
+        graph.add((subject, cito.hasCitingEntity, citingEntity))
+        graph.add((subject, cito.hasCitedEntity, citedEntity))
         graph.add((subject, oa.hasTarget, citedEntity))
         graph.add((subject, oa.hasBody, charme.bodyID))
         graph.add((subject, oa.hasBody, citingEntity))
         graph.add((subject, oa.motivatedBy, oa.describing))
         graph.add((subject, oa.motivatedBy, oa.linking))
-        #graph.add((subject, cito.hasCitingEntity, citingEntity))
-        #graph.add((subject, cito.hasCitedEntity, citedEntity))
-        #graph.add((subject, cito.hasCitationCharacterization, cito.describes))
 
         # creating the body
-        graph.add((charme.bodyID, RDF.type, cnt.ContentAsText))
-        graph.add((charme.bodyID, RDF.type, dcmi.Text))
-        graph.add((charme.bodyID, DC['format'], Literal('text/plain')))
-        graph.add((charme.bodyID, cnt.chars, Literal(doc.xpathEval(xpaths["@description"]))))
+        subject = URIRef(charme.bodyID)
+        graph.add((subject, RDF.type, cnt.ContentAsText))
+        graph.add((subject, RDF.type, dcmi.Text))
+        graph.add((subject, DC['format'], Literal('text/plain')))
+        graph.add((subject, cnt.chars, Literal(doc.xpathEval(xpaths["@description"]))))
 
         #citedEntityType
         graph.add((URIRef(doi_uri), RDF.type, dcmi.Dataset))
+
+        #the citedEntityType
+        subject=citedEntity
+        graph.add((subject, RDF.type, dcmi.Dataset))
+
         #citingEntityType
         citingEntityType = URIRef(doc.xpathEval(xpaths["@docTypeRdfUri"]))
         if len(citingEntityType)==0:
             citingEntityType = fabio.JournalArticle
-        graph.add((citingEntity, RDF.type,citingEntityType))
+        subject=citingEntity
+        graph.add((subject, RDF.type,citingEntityType))
 
         graph.bind("oa", oa)
-        #graph.bind("cito", cito)
+        graph.bind("cito", cito)
         graph.bind("cnt", cnt)
         graph.bind("fabio",fabio)
         graph.bind("dc", DC)
