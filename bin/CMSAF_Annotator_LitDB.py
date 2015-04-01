@@ -199,8 +199,8 @@ def curling(fh):
 
     #running the just created shell script
     subprocess.call(["chmod", "+x", fh_curl.name])
-    #status = subprocess.call([fh_curl.name])
-    #logger.debug("status: %s" % status)
+    status = subprocess.call([fh_curl.name])
+    logger.debug("status: %s" % status)
 
 def get_timestamp():
     return "\"%s\"" % datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
