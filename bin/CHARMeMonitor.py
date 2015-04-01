@@ -1,17 +1,17 @@
 import logging
 import sys
-import os
 import getopt
 import subprocess
-
 import datetime
 import time
+import webbrowser
+import ConfigParser
+import errno
 
+import os
 import libxml2
 import libxslt
 
-import webbrowser
-import ConfigParser
 
 logging.basicConfig(format='[%(name)s].[%(levelname)s].[%(asctime)s]: %(message)s', datefmt='%Y-%m-%dT%H:%M:%S%Z', level=logging.INFO)
 logger = logging.getLogger(sys.argv[0].rpartition("/")[2].replace(".py",""))
@@ -124,11 +124,19 @@ def display(htmlFile):
         raise
 
 
+def mkdir(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+
+
 def usage():
   print "\nThis is the usage function\n"
   print 'Usage: '+sys.argv[0]+' -q -p -h'
   print '\n '
-  print '[*]\t-q|--queryTemplate\tsparql template file containing the constraints to run the query e.g. ./tmpl/charme_sparql_overview'
+  print '[*]\t-q|--queryTemplate\tsparql template file containing the constraints to run the query e.g. ../monitor/sparql/charme_sparql_overview'
   print '[]\t-p|--params\t\tstring with param=value; e.g. "timestamp_from=int;timestamp_until=int"'
   print '\t\t\t\twith timestamp_until < timestamp_from as the timestamp is calculated as datetime.now() - int(days)'
   print '[]\t-l|--loglevel\t\tlogging level default=logging.INFO (DEBUG=10 INFO=20 WARN=30 ERROR=40 CRITICAL=50)'
@@ -162,6 +170,8 @@ def main(args):
 
         configs["charme.uri"] = cfgp.get("CHARMe","CHARME_NODE")
         configs["charme.sparql.endpoint"] = "{0}{1}".format(configs["charme.uri"],configs["sparql.endpoint"])
+        mkdir(configs["dir.output"])
+
         logger.debug("charme uri:{0}".format(configs["charme.uri"]))
         logger.debug("charme.sparql.endpoint:{0}".format(configs["charme.sparql.endpoint"]))
 

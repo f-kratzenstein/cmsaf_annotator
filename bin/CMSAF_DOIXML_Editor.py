@@ -48,7 +48,7 @@ namespaces = {
 datacite_xsd_version = 3
 
 def setLogging(logLevel=logging.INFO):
-    logger.setLevel(logLevel)
+    logger.setLevel(int(logLevel))
 
 def curl(skos):
     """
@@ -243,7 +243,7 @@ def main(args):
                 datacite_xsd_version = arg
             elif opt in ("-l", "--loglevel"):
                 logger.debug("--loglevel: %s" %arg)
-                logger.setLevel(arg)
+                logger.setLevel(int(arg))
 
     namespaces["datacite"]=namespaces["datacite"].format(datacite_xsd_version)
 
