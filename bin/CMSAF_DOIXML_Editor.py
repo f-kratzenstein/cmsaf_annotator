@@ -23,7 +23,7 @@ configs = {
     "xpath.cmsaf_doc"   :   "/datacite:resource/datacite:cmsaf_documentations/datacite:cmsaf_documentation",
     "charme.local.vocab":   "../skos/CHARMe_vocab.xml",
     "charme.doi.dir"    :   "../doi",
-    "charme.doi.xslt"   :   "../doi/xslt/cmsaf_doi2html.xml",
+    "charme.doi.xslt"   :   "../doi/xslt/cmsaf_doi2html.xsl",
     "charme.uri.vocab"  :   'https://charme.cems.rl.ac.uk/vocab',
     "sparql.query"      :   """
                             select distinct ?s ?o
