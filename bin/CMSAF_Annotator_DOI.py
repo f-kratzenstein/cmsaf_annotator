@@ -115,14 +115,18 @@ def xml2rdf(ifh, rdf_handles):
         subject = URIRef(charme.annoID)
         graph.add((subject, RDF.type, oa.Annotation))
         graph.add((subject, RDF.type, cito.CitationAct))
-        graph.add((subject, cito.hasCitationCharacterization, cito.describes))
-        graph.add((subject, cito.hasCitingEntity, citingEntity))
-        graph.add((subject, cito.hasCitedEntity, citedEntity))
-        graph.add((subject, oa.hasTarget, citedEntity))
+        #the bodies
         graph.add((subject, oa.hasBody, charme.bodyID))
         graph.add((subject, oa.hasBody, citingEntity))
+        #the target
+        graph.add((subject, oa.hasTarget, citedEntity))
+        #the motivation
         graph.add((subject, oa.motivatedBy, oa.describing))
         graph.add((subject, oa.motivatedBy, oa.linking))
+        #the citation details
+        graph.add((subject, cito.hasCitingEntity, citingEntity))
+        graph.add((subject, cito.hasCitationCharacterization, cito.citesAsDatasource))
+        graph.add((subject, cito.hasCitedEntity, citedEntity))
 
         # creating the body
         subject = URIRef(charme.bodyID)
@@ -131,18 +135,15 @@ def xml2rdf(ifh, rdf_handles):
         graph.add((subject, DC['format'], Literal('text/plain')))
         graph.add((subject, cnt.chars, Literal(doc.xpathEval(xpaths["@description"]))))
 
-        #citedEntityType
-        graph.add((URIRef(doi_uri), RDF.type, dcmi.Dataset))
-
         #the citedEntityType
         subject=citedEntity
         graph.add((subject, RDF.type, dcmi.Dataset))
 
-        #citingEntityType
+        #the citingEntity
+        subject=citingEntity
         citingEntityType = URIRef(doc.xpathEval(xpaths["@docTypeRdfUri"]))
         if len(citingEntityType)==0:
             citingEntityType = fabio.JournalArticle
-        subject=citingEntity
         graph.add((subject, RDF.type,citingEntityType))
 
         graph.bind("oa", oa)
