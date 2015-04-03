@@ -1,6 +1,6 @@
 #!/bin/bash
 
-usage() {
+usage(){
 cat <<EOM
 Usage of $(basename $0) :
    refreshing the Authentication token to connect to the CHARMe Node in the ./CHARMeService.cfg
@@ -9,7 +9,7 @@ Usage of $(basename $0) :
    [*] -p=|--password=    password of the user
 
 EOM
-    exit 0
+exit 0
 }
 
 source CHARMeService.cfg
@@ -65,7 +65,7 @@ expires_in=`grep expires_in header  | cut -d'=' -f4 | cut -d'&' -f1`
 echo "expires in: ${expires_in}"
 
 expires_at=$(date --date="${expires_in} second" +%s)
-echo "expires_at: ${expires_at}"
+echo "expires_at: ${expires_at} | $(date --date="${expires_in} second" +%F)"
 sed -i -e "s/^EXPIRES_AT=[0-9]*$/EXPIRES_AT=${expires_at}/" ../CHARMeService.cfg
 cd ..
 

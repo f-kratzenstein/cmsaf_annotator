@@ -1,0 +1,80 @@
+{
+  "@graph": [
+    {
+      "@id": "http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_ATOVS_1.pdf?__blob=publicationFile",
+      "@type": "http://purl.org/voc/charme#ValidationReport"
+    },
+    {
+      "@id": "http://purl.org/spar/charme/resource/db56a651d51f431a903a1d38fdb356a2",
+      "@type": [
+        "http://www.w3.org/2011/content#ContentAsText",
+        "http://purl.org/dc/dcmitype/Text"
+      ],
+      "http://purl.org/dc/elements/1.1/format": "text/plain",
+      "http://www.w3.org/2011/content#chars": "Validation Report"
+    },
+    {
+      "@id": "http://purl.org/spar/charme/resource/404e846b026c4d9f88552b5db8d60739",
+      "@type": [
+        "http://purl.org/spar/cito/CitationAct",
+        "http://www.w3.org/ns/oa#Annotation"
+      ],
+      "http://purl.org/spar/cito/hasCitationCharacterization": {
+        "@id": "http://purl.org/spar/cito/describes"
+      },
+      "http://purl.org/spar/cito/hasCitedEntity": {
+        "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/WVT_ATOVS/V001"
+      },
+      "http://purl.org/spar/cito/hasCitingEntity": {
+        "@id": "http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_ATOVS_1.pdf?__blob=publicationFile"
+      },
+      "http://www.w3.org/ns/oa#annotatedAt": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-04-02T09:15:20.150293"
+      },
+      "http://www.w3.org/ns/oa#annotatedBy": [
+        {
+          "@id": "http://cmsaf.eu/"
+        },
+        {
+          "@id": "https://charme.cems.rl.ac.uk/resource/701b79a6f5034a8aaccc4f5abb974980"
+        }
+      ],
+      "http://www.w3.org/ns/oa#hasBody": [
+        {
+          "@id": "http://www.cmsaf.eu/EN/Documentation/Documentation/ValidationRep/pdf/SAF_CM_DWD_VAL_ATOVS_1.pdf?__blob=publicationFile"
+        },
+        {
+          "@id": "http://purl.org/spar/charme/resource/db56a651d51f431a903a1d38fdb356a2"
+        }
+      ],
+      "http://www.w3.org/ns/oa#hasTarget": {
+        "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/WVT_ATOVS/V001"
+      },
+      "http://www.w3.org/ns/oa#motivatedBy": [
+        {
+          "@id": "http://www.w3.org/ns/oa#linking"
+        },
+        {
+          "@id": "http://www.w3.org/ns/oa#describing"
+        }
+      ]
+    },
+    {
+      "@id": "https://charme.cems.rl.ac.uk/resource/701b79a6f5034a8aaccc4f5abb974980",
+      "@type": "http://xmlns.com/foaf/0.1/Person",
+      "http://xmlns.com/foaf/0.1/accountName": "nselbach",
+      "http://xmlns.com/foaf/0.1/familyName": "Selbach",
+      "http://xmlns.com/foaf/0.1/givenName": "Nathalie"
+    },
+    {
+      "@id": "http://cmsaf.eu/",
+      "@type": "http://xmlns.com/foaf/0.1/Organization",
+      "http://xmlns.com/foaf/0.1/name": "CMSAF-DWD"
+    },
+    {
+      "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/WVT_ATOVS/V001",
+      "@type": "http://purl.org/dc/dcmitype/Dataset"
+    }
+  ]
+}

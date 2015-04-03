@@ -1,0 +1,17 @@
+@prefix oa: <http://www.openannotation.org/spec/core/> .
+@prefix dctypes: < http://purl.org/dc/dcmitype/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+
+<citation1> a oa:Annotation ;
+       a cito:CitationAct ;
+oa:hasBody <citation> ;
+oa:hasTarget <http://dx.doi.org/10.5285/aef749ed-3ee9-4ce0-a0f9-e5bb369b5861> ;
+oa:motivatedBy oa:linking ;
+cito:hasCitingEntity <http://dx.doi.org/10.5285/4BCFA3A4-C7EC-4414-863D-CAECEB21F16F> ;
+cito:hasCitationEvent cito:citesAsDataSource ;
+cito:hasCitedEntity < http://dx.doi.org/10.5285/aef749ed-3ee9-4ce0-a0f9-e5bb369b5861> .
+
+<http://dx.doi.org/10.5285/4BCFA3A4-C7EC-4414-863D-CAECEB21F16F> a fabio:ConferencePaper .
+<http://dx.doi.org/10.5285/aef749ed-3ee9-4ce0-a0f9-e5bb369b5861> a dctypes:Dataset .
+

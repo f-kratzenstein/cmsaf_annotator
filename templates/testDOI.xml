@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <resource xmlns="http://datacite.org/schema/kernel-2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-2.2 http://schema.datacite.org/meta/kernel-2.2/metadata.xsd">
-	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/DAL_MVIRI_SEVIRI/V001</identifier>
+	<identifier identifierType="DOI">10.5676/EUM_SAF_CM/DAL_MVIRI_SEVIRI/VXX1</identifier>
 	<creators>
-		<creator>
+		<creator>a
 			<creatorName>M&#xFC;ller, Richard</creatorName>
 		</creator>
 		<creator>

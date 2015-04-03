@@ -8,9 +8,9 @@ import subprocess
 import glob
 import uuid
 import errno
+import os
 
 import libxml2
-import os
 from rdflib import Graph
 from rdflib import Namespace
 from rdflib import URIRef,  Literal
@@ -104,7 +104,6 @@ def xml2rdf(ifh, rdf_handles):
             logger.error ("I/O error({0}): {1}".format(e.errno, e.strerror))
             raise
 
-
         graph = Graph()
 
         citedEntity     = URIRef(doi_uri)
@@ -114,19 +113,19 @@ def xml2rdf(ifh, rdf_handles):
         #the OAnnotation
         subject = URIRef(charme.annoID)
         graph.add((subject, RDF.type, oa.Annotation))
-        graph.add((subject, RDF.type, cito.CitationAct))
+        #graph.add((subject, RDF.type, cito.CitationAct))
         #the bodies
         graph.add((subject, oa.hasBody, charme.bodyID))
-        graph.add((subject, oa.hasBody, citingEntity))
+        #graph.add((subject, oa.hasBody, citingEntity))
         #the target
         graph.add((subject, oa.hasTarget, citedEntity))
         #the motivation
         graph.add((subject, oa.motivatedBy, oa.describing))
         graph.add((subject, oa.motivatedBy, oa.linking))
         #the citation details
-        graph.add((subject, cito.hasCitingEntity, citingEntity))
-        graph.add((subject, cito.hasCitationCharacterization, cito.citesAsDatasource))
-        graph.add((subject, cito.hasCitedEntity, citedEntity))
+        #graph.add((subject, cito.hasCitingEntity, citingEntity))
+        #graph.add((subject, cito.hasCitationCharacterization, cito.citesAsDatasource))
+        #graph.add((subject, cito.hasCitedEntity, citedEntity))
 
         # creating the body
         subject = URIRef(charme.bodyID)
@@ -136,8 +135,8 @@ def xml2rdf(ifh, rdf_handles):
         graph.add((subject, cnt.chars, Literal(doc.xpathEval(xpaths["@description"]))))
 
         #the citedEntityType
-        subject=citedEntity
-        graph.add((subject, RDF.type, dcmi.Dataset))
+        #subject=citedEntity
+        #graph.add((subject, RDF.type, dcmi.Dataset))
 
         #the citingEntity
         subject=citingEntity
@@ -152,7 +151,6 @@ def xml2rdf(ifh, rdf_handles):
         graph.bind("fabio",fabio)
         graph.bind("dc", DC)
         #graph.bind("charme", charme)
-
 
         logger.debug("graph: \n %s" % graph.serialize(format="turtle"))
         ofh.write(graph.serialize(format="turtle"))

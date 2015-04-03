@@ -1,0 +1,210 @@
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+    <id>https://charme-test.cems.rl.ac.uk/searchatom</id>
+    <title>CHARMe results</title>
+    <updated>2015-03-30T09:05:25.562321</updated>
+    <link href="https://charme-test.cems.rl.ac.uk/search/description" rel="search"
+          type="application/opensearchdescription+xml"/>
+    <link href="https://charme-test.cems.rl.ac.uk/search/atom/?&amp;count=25&amp;startIndex=1&amp;q=*&amp;status=submitted&amp;target=http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1&amp;depth=1&amp;format=json-ld"
+          rel="self" type="application/atom+xml"/>
+    <link href="https://charme-test.cems.rl.ac.uk/search/atom/?&amp;count=25&amp;startIndex=1&amp;q=*&amp;status=submitted&amp;target=http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1&amp;depth=1&amp;format=json-ld"
+          rel="first" type="application/atom+xml"/>
+    <link href="https://charme-test.cems.rl.ac.uk/search/atom/?&amp;count=25&amp;startIndex=1&amp;q=*&amp;status=submitted&amp;target=http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1&amp;depth=1&amp;format=json-ld"
+          rel="next" type="application/atom+xml"/>
+    <link href="https://charme-test.cems.rl.ac.uk/search/atom/?&amp;count=25&amp;startIndex=1&amp;q=*&amp;status=submitted&amp;target=http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1&amp;depth=1&amp;format=json-ld"
+          rel="previous" type="application/atom+xml"/>
+    <link href="https://charme-test.cems.rl.ac.uk/search/atom/?&amp;count=25&amp;startIndex=1&amp;q=*&amp;status=submitted&amp;target=http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1&amp;depth=1&amp;format=json-ld"
+          rel="last" type="application/atom+xml"/>
+    <os:totalResults>3</os:totalResults>
+    <os:startIndex>1</os:startIndex>
+    <os:indexPerPage>25</os:indexPerPage>
+    <Query bodyType="" citingType="" count="25" dataType="" depth="1" domainOfInterest="" format="json-ld" motivation=""
+           organization="" q="*" role="request" startIndex="1" startPage="1" status="submitted"
+           target="http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1" title="" userName=""
+           xmlns="http://a9.com/-/spec/opensearch/1.1/"/>
+    <entry>
+        <id>http://purl.org/spar/charme/resource/29f67dc09d0a4e78af994acf2d574090</id>
+        <title>http://purl.org/spar/charme/resource/29f67dc09d0a4e78af994acf2d574090</title>
+        <updated>2015-04-03T07:17:01.622055</updated>
+        <content>{
+            "@graph": [
+            {
+            "@id": "http://purl.org/spar/charme/resource/29f67dc09d0a4e78af994acf2d574090",
+            "@type": "http://www.w3.org/ns/oa#Annotation",
+            "http://www.w3.org/ns/oa#annotatedAt": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "@value": "2015-04-03T06:09:55.330028"
+            },
+            "http://www.w3.org/ns/oa#annotatedBy": [
+            {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/cbbc6999b83643f092aa51db14382255"
+            },
+            {
+            "@id": "http://cmsaf.eu/"
+            }
+            ],
+            "http://www.w3.org/ns/oa#hasBody": {
+            "@id": "http://purl.org/spar/charme/resource/959effbb2d6d42d387c5dc708f1707b8"
+            },
+            "http://www.w3.org/ns/oa#hasTarget": {
+            "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1"
+            },
+            "http://www.w3.org/ns/oa#motivatedBy": [
+            {
+            "@id": "http://www.w3.org/ns/oa#describing"
+            },
+            {
+            "@id": "http://www.w3.org/ns/oa#linking"
+            }
+            ]
+            },
+            {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/cbbc6999b83643f092aa51db14382255",
+            "@type": "http://xmlns.com/foaf/0.1/Person",
+            "http://xmlns.com/foaf/0.1/accountName": "fkratzen",
+            "http://xmlns.com/foaf/0.1/familyName": "Kratzenstein",
+            "http://xmlns.com/foaf/0.1/givenName": "Frank"
+            },
+            {
+            "@id": "http://cmsaf.eu/",
+            "@type": "http://xmlns.com/foaf/0.1/Organization",
+            "http://xmlns.com/foaf/0.1/name": "CMSAF-DWD"
+            },
+            {
+            "@id": "http://purl.org/spar/charme/resource/959effbb2d6d42d387c5dc708f1707b8",
+            "@type": [
+            "http://www.w3.org/2011/content#ContentAsText",
+            "http://purl.org/dc/dcmitype/Text"
+            ],
+            "http://purl.org/dc/elements/1.1/format": "text/plain",
+            "http://www.w3.org/2011/content#chars": "Validation Report"
+            }
+            ]
+            }
+        </content>
+        <published>2015-04-03T07:17:01.622055</published>
+    </entry>
+    <entry>
+        <id>http://purl.org/spar/charme/resource/21186e3b7b2e4ccf87d85a2e740724f8</id>
+        <title>http://purl.org/spar/charme/resource/21186e3b7b2e4ccf87d85a2e740724f8</title>
+        <updated>2015-04-03T07:17:01.622100</updated>
+        <content>{
+            "@graph": [
+            {
+            "@id": "http://purl.org/spar/charme/resource/21186e3b7b2e4ccf87d85a2e740724f8",
+            "@type": "http://www.w3.org/ns/oa#Annotation",
+            "http://www.w3.org/ns/oa#annotatedAt": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "@value": "2015-04-03T06:09:54.222419"
+            },
+            "http://www.w3.org/ns/oa#annotatedBy": [
+            {
+            "@id": "http://cmsaf.eu/"
+            },
+            {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/ec575366a55145e1ad6c8ce13acbfb2c"
+            }
+            ],
+            "http://www.w3.org/ns/oa#hasBody": {
+            "@id": "http://purl.org/spar/charme/resource/2dde33c2a71a4be89df2c18656f43096"
+            },
+            "http://www.w3.org/ns/oa#hasTarget": {
+            "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1"
+            },
+            "http://www.w3.org/ns/oa#motivatedBy": [
+            {
+            "@id": "http://www.w3.org/ns/oa#linking"
+            },
+            {
+            "@id": "http://www.w3.org/ns/oa#describing"
+            }
+            ]
+            },
+            {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/ec575366a55145e1ad6c8ce13acbfb2c",
+            "@type": "http://xmlns.com/foaf/0.1/Person",
+            "http://xmlns.com/foaf/0.1/accountName": "fkratzen",
+            "http://xmlns.com/foaf/0.1/familyName": "Kratzenstein",
+            "http://xmlns.com/foaf/0.1/givenName": "Frank"
+            },
+            {
+            "@id": "http://cmsaf.eu/",
+            "@type": "http://xmlns.com/foaf/0.1/Organization",
+            "http://xmlns.com/foaf/0.1/name": "CMSAF-DWD"
+            },
+            {
+            "@id": "http://purl.org/spar/charme/resource/2dde33c2a71a4be89df2c18656f43096",
+            "@type": [
+            "http://purl.org/dc/dcmitype/Text",
+            "http://www.w3.org/2011/content#ContentAsText"
+            ],
+            "http://purl.org/dc/elements/1.1/format": "text/plain",
+            "http://www.w3.org/2011/content#chars": "Product User Manual (PUM)"
+            }
+            ]
+            }
+        </content>
+        <published>2015-04-03T07:17:01.622100</published>
+    </entry>
+    <entry>
+        <id>http://purl.org/spar/charme/resource/9902c06ee7fa451789a80e76939f2f84</id>
+        <title>http://purl.org/spar/charme/resource/9902c06ee7fa451789a80e76939f2f84</title>
+        <updated>2015-04-03T07:17:01.622138</updated>
+        <content>{
+            "@graph": [
+            {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/d7a778d87a674cbe9dd0901138c13fec",
+            "@type": "http://xmlns.com/foaf/0.1/Person",
+            "http://xmlns.com/foaf/0.1/accountName": "fkratzen",
+            "http://xmlns.com/foaf/0.1/familyName": "Kratzenstein",
+            "http://xmlns.com/foaf/0.1/givenName": "Frank"
+            },
+            {
+            "@id": "http://purl.org/spar/charme/resource/da53b6ff2b2d44aa8c1a297b4739fb07",
+            "@type": [
+            "http://purl.org/dc/dcmitype/Text",
+            "http://www.w3.org/2011/content#ContentAsText"
+            ],
+            "http://purl.org/dc/elements/1.1/format": "text/plain",
+            "http://www.w3.org/2011/content#chars": "Algorithm Theoretical Baseline Document (ATBD)"
+            },
+            {
+            "@id": "http://cmsaf.eu/",
+            "@type": "http://xmlns.com/foaf/0.1/Organization",
+            "http://xmlns.com/foaf/0.1/name": "CMSAF-DWD"
+            },
+            {
+            "@id": "http://purl.org/spar/charme/resource/9902c06ee7fa451789a80e76939f2f84",
+            "@type": "http://www.w3.org/ns/oa#Annotation",
+            "http://www.w3.org/ns/oa#annotatedAt": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "@value": "2015-04-03T06:09:53.100290"
+            },
+            "http://www.w3.org/ns/oa#annotatedBy": [
+            {
+            "@id": "http://cmsaf.eu/"
+            },
+            {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/d7a778d87a674cbe9dd0901138c13fec"
+            }
+            ],
+            "http://www.w3.org/ns/oa#hasBody": {
+            "@id": "http://purl.org/spar/charme/resource/da53b6ff2b2d44aa8c1a297b4739fb07"
+            },
+            "http://www.w3.org/ns/oa#hasTarget": {
+            "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/TEST_DATASET/VXX1"
+            },
+            "http://www.w3.org/ns/oa#motivatedBy": [
+            {
+            "@id": "http://www.w3.org/ns/oa#describing"
+            },
+            {
+            "@id": "http://www.w3.org/ns/oa#linking"
+            }
+            ]
+            }
+            ]
+            }
+        </content>
+        <published>2015-04-03T07:17:01.622138</published>
+    </entry>
+</feed>

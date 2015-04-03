@@ -1,0 +1,58 @@
+{
+    "@graph": [
+        {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/cf6b6b26c4f3472d9b0fae53acb2cd41",
+            "@type": "http://www.w3.org/ns/oa#Annotation",
+            "http://www.w3.org/ns/oa#annotatedAt": {
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "@value": "2014-12-05T15:10:07.814291"
+            },
+            "http://www.w3.org/ns/oa#annotatedBy": {
+                "@id": "https://charme-test.cems.rl.ac.uk/resource/3125b4c307044733b9cd977415ac41e8"
+            },
+            "http://www.w3.org/ns/oa#hasBody": [
+                {
+                    "@id": "https://charme-test.cems.rl.ac.uk/resource/a4e18f392d214333a392069b733cb4ac"
+                },
+                {
+                    "@id": "http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_ATOVS_1.pdf?__blob=publicationFile"
+                }
+            ],
+            "http://www.w3.org/ns/oa#hasTarget": {
+                "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/WVT_ATOVS/V001"
+            },
+            "http://www.w3.org/ns/oa#motivatedBy": [
+                {
+                    "@id": "http://www.w3.org/ns/oa#describing"
+                },
+                {
+                    "@id": "http://www.w3.org/ns/oa#linking"
+                }
+            ]
+        },
+        {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/a4e18f392d214333a392069b733cb4ac",
+            "@type": [
+                "http://purl.org/dc/dcmitype/Text",
+                "http://www.w3.org/2011/content#ContentAsText"
+            ],
+            "http://purl.org/dc/elements/1.1/format": "text/plain",
+            "http://www.w3.org/2011/content#chars": "Product User Manual (PUM)"
+        },
+        {
+            "@id": "http://www.cmsaf.eu/EN/Documentation/Documentation/PUM/pdf/SAF_CM_DWD_PUM_ATOVS_1.pdf?__blob=publicationFile",
+            "@type": "http://purl.org/voc/charme#ProductUserManual"
+        },
+        {
+            "@id": "https://charme-test.cems.rl.ac.uk/resource/3125b4c307044733b9cd977415ac41e8",
+            "@type": "http://xmlns.com/foaf/0.1/Person",
+            "http://xmlns.com/foaf/0.1/accountName": "fkratzen",
+            "http://xmlns.com/foaf/0.1/familyName": "Kratzenstein",
+            "http://xmlns.com/foaf/0.1/givenName": "Frank"
+        },
+        {
+            "@id": "http://dx.doi.org/10.5676/EUM_SAF_CM/WVT_ATOVS/V001",
+            "@type": "http://purl.org/dc/dcmitype/Dataset"
+        }
+    ]
+}

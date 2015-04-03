@@ -101,7 +101,7 @@ def init(arg):
 def usage():
     print "\nThis is the usage function\n"
     print 'Usage: ' + sys.argv[0] + '-w <--working-dir> -i <--inputFile1> -s <--toState>'
-    print "\n\t[*]\t-i|--inputFile\t\tname of the resides in the preconfigured stage_dir"
+    print "\n\t[*]\t-i|--inputFile\t\tname of the file with the annotation to status advance"
     print "\t\t\t\t\tthe inputFile must be a CHARMe AtomFeed.xml, which <entry><id>-tags defines the annotations to advance"
     print '\t[*]\t-w|--working_dir\tbase directory of the charme_annotator containing the referenced subfolders like bin, doi ...'
     print '\t[*]\t-s|--toState\t\tthe status to advance the annotation(s) to (submitted|stable|invalid|retired)'
@@ -137,15 +137,22 @@ def main(arguements):
         elif opt in ("-l", "--logLevel"):
             logger.debug("--logLevel: %s" %arg)
             logger.setLevel(int(arg))
-            
-    file_handle = os.path.join(dirs["stage_dir"], inputFile)
 
-    #creating the json-files
-    file_handles = xml2json(file_handle, toState)
+    # make sure the file exists, else show an error and exit
+    if ( os.path.isfile(inputFile)):
 
-    logger.debug ("annotation-file(s) to insert: %s" % file_handles)
-    #writing a shell script for transferring the json-files to the charme_node
-    curling(file_handles)
+        file_handle = os.path.join(dirs["stage_dir"], inputFile)
+
+        #creating the json-files
+        file_handles = xml2json(inputFile, toState)
+
+        logger.debug ("annotation-file(s) to advance status: %s" % file_handles)
+        #writing a shell script for transferring the json-files to the charme_node
+        curling(file_handles)
+
+    else:
+        logger.warn("The requested file [{0}] does not exists!".format(inputFile))
+        raise IOError
 
 if __name__ == '__main__':
     main(sys.argv[1:])
