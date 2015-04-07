@@ -3,13 +3,13 @@
 usage() {
 cat <<EOM
    Usage of $(basename $0) :
-   [*] -n=|--node=     CHARMe Node to connect to (provided through ./CHARMeService.cfg)
-   [*] -t=|--token=    OA_TOKEN Authentication token to connect to the CHARMe Node  (provided through ./CHARMeService.cfg)
+   [] -n=|--node=     CHARMe Node to connect to (provided through ./CHARMeService.cfg)
+   [] -t=|--token=    OA_TOKEN Authentication token to connect to the CHARMe Node  (provided through ./CHARMeService.cfg)
    [*] -u=|--uri=      URI of the DOI
    []  -s=|--service=  the service to call at CHARMe Node [search*|suggest|advance_status|insert/annoation]
    []  -g=|--graph=    the graph at the CHARMe Node to run the service against [submitted*|retired|invalid]
    []  -i=|--input=    filename with data for the services [advance_status|insert/annoation]
-   []  -o=|--output=   filename to store the reponse of the server into
+   [*]  -o=|--output=  filename to store the response of the server to
    []  -f=|--format=   encoding format of the input data
 
 EOM
@@ -76,6 +76,7 @@ echo "run Service: ${SERVICE} on Graph:${GRAPH} @${CHARME_SERVER} as ${OA_TOKEN}
 
 if [ -z "${ODATA}" ];then
     echo "Error: missing arguement -o=|--output=: ${DOI_URI}"
+    usage
     exit $E_BADARGS
 fi
 
@@ -85,12 +86,14 @@ then
     if [ -z "${IDATA}" ]
     then
         echo "Error: missing arguement -i=|--input=: ${IDATA}"
+        usage
         exit $E_BADARGS
     fi
 
     if  [ -z "${FORMAT}" ]
     then
         echo "Error: missing or bad arguement -f=|--format=: ${FORMAT}"
+        usage
         exit $E_BADARGS
     fi
 

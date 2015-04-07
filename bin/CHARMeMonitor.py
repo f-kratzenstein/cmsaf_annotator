@@ -23,6 +23,7 @@ configs = {
     "charme.uri"        : "https://charme-test.cems.rl.ac.uk",
     "xslt.overview"     : "../monitor/xslt/charme_sparql_overview.xsl",
     "dir.output"        : "../monitor/data",
+    "sparql.query.default"  : "../monitor/sparql/charme_sparql_overview",
     "sparql.endpoint"   : "/sparql",
     "charme.sparql.endpoint" : "",
 }
@@ -136,8 +137,8 @@ def usage():
   print "\nThis is the usage function\n"
   print 'Usage: '+sys.argv[0]+' -q -p -h'
   print '\n '
-  print '[*]\t-q|--queryTemplate\tsparql template file containing the constraints to run the query e.g. ../monitor/sparql/charme_sparql_overview'
-  print '[]\t-p|--params\t\tstring with param=value; e.g. "timestamp_from=int;timestamp_until=int"'
+  print '[]\t-q|--queryTemplate\tsparql template file containing the constraints to run the query; default ../monitor/sparql/charme_sparql_overview'
+  print '[]\t-p|--params\t\tstring with param=value; default "timestamp_from=28;timestamp_until=0"'
   print '\t\t\t\twith timestamp_until < timestamp_from as the timestamp is calculated as datetime.now() - int(days)'
   print '[]\t-l|--loglevel\t\tlogging level default=logging.INFO (DEBUG=10 INFO=20 WARN=30 ERROR=40 CRITICAL=50)'
   print '\n '
@@ -151,6 +152,8 @@ def main(args):
         opts, args = getopt.getopt(args, "q: p: l:", [ "queryTemplate=","params=","loglevel="])
         logger.debug("opts: %s" % opts)
         logger.debug("args: %s" % args)
+
+        ifh = configs["sparql.query.default"]
 
         for opt, arg in opts:
             if opt in ("-h", "--help"):
@@ -174,11 +177,6 @@ def main(args):
 
         logger.debug("charme uri:{0}".format(configs["charme.uri"]))
         logger.debug("charme.sparql.endpoint:{0}".format(configs["charme.sparql.endpoint"]))
-
-        if (ifh ==""):
-            logger.warn("missing input param: inputFile")
-            usage()
-            sys.exit(2)
 
         qfh = finegrain_query(ifh,params)
         rfh = curl(qfh)

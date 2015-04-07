@@ -116,7 +116,7 @@ def xml2rdf(ifh, rdf_handles):
         #graph.add((subject, RDF.type, cito.CitationAct))
         #the bodies
         graph.add((subject, oa.hasBody, charme.bodyID))
-        #graph.add((subject, oa.hasBody, citingEntity))
+        graph.add((subject, oa.hasBody, citingEntity))
         #the target
         graph.add((subject, oa.hasTarget, citedEntity))
         #the motivation
@@ -135,8 +135,8 @@ def xml2rdf(ifh, rdf_handles):
         graph.add((subject, cnt.chars, Literal(doc.xpathEval(xpaths["@description"]))))
 
         #the citedEntityType
-        #subject=citedEntity
-        #graph.add((subject, RDF.type, dcmi.Dataset))
+        subject=citedEntity
+        graph.add((subject, RDF.type, dcmi.Dataset))
 
         #the citingEntity
         subject=citingEntity
