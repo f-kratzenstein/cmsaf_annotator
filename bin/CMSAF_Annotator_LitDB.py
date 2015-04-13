@@ -36,6 +36,7 @@ definedFieldNames = ["CitingEntity",
 
 #List of namespaces/prefixes we have to use
 namespaces = {
+    "chnode":   "http://localhost/",
     "charme":       "http://purl.org/spar/charme/",
     "cito"  :       "http://purl.org/spar/cito/",
     "cnt"   :       "http://www.w3.org/2011/content#" ,
@@ -90,6 +91,7 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
         #just for readability when writing the turtle file
         oa      = Namespace(namespaces["oa"])
         charme  = Namespace(namespaces["charme"])
+        chnode  = Namespace(namespaces["chnode"])
         cito    = Namespace(namespaces["cito"])
         fabio   = Namespace(namespaces["fabio"])
         dcmi    = Namespace(namespaces["dcmi"])
@@ -120,7 +122,7 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
                 logger.debug("create annotation as citation ...")
                 graph = Graph()
                 #the OAnnotation
-                subject = URIRef(charme.annoID)
+                subject = URIRef(chnode.annoID)
                 logger.debug("subject: %s" % subject)
                 graph.add((subject, RDF.type, oa.Annotation))
                 graph.add((subject, RDF.type, cito.CitationAct))
@@ -129,12 +131,12 @@ def csv2ttl(ifh, delimiter=config_props["delimiter"]):
                 graph.add((subject, cito.hasCitingEntity, URIRef(row["CitingEntity"])))
                 graph.add((subject, oa.motivatedBy, oa[row["Motivation"]]))
                 graph.add((subject, oa.hasTarget, URIRef(row["CitedEntity"])))
-                graph.add((subject, oa.hasBody, charme.bodyID))
+                graph.add((subject, oa.hasBody, chnode.bodyID))
                 graph.add((subject, oa.hasBody, URIRef(row["CitingEntity"])))
 
 
                 #creating the body
-                subject = URIRef(charme.bodyID)
+                subject = URIRef(chnode.bodyID)
                 graph.add((subject, RDF.type, cnt.ContentAsText))
                 graph.add((subject, RDF.type, dcmi.Text))
                 graph.add((subject, DC["format"], Literal("text/plain")))
@@ -273,6 +275,9 @@ def main(arguements):
 
     logger.info("%s exists: %s" % (ifh, os.path.isfile(ifh)))
     logging.debug("config_props: %s" % config_props)
+
+    if not "dir_wrk" in config_props:
+        init("..")
 
     if (os.path.isfile(ifh)):
         file_handles = csv2ttl(ifh, config_props["delimiter"])

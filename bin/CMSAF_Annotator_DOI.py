@@ -28,6 +28,7 @@ dirs        = dict()
 
 #List of namespaces/prefixes we have to use
 namespaces = {
+    "chnode":   "http://localhost/",
     "charme":   "http://purl.org/spar/charme/",
     "cito"  :   "http://purl.org/spar/cito/",
     "cnt"   :   "http://www.w3.org/2011/content#" ,
@@ -78,6 +79,7 @@ def xml2rdf(ifh, rdf_handles):
     """
     oa      = Namespace(namespaces["oa"])
     charme  = Namespace(namespaces["charme"])
+    chnode  = Namespace(namespaces["chnode"])
     cito    = Namespace(namespaces["cito"])
     fabio   = Namespace(namespaces["fabio"])
     dcmi    = Namespace(namespaces["dcmi"])
@@ -111,11 +113,11 @@ def xml2rdf(ifh, rdf_handles):
 
         logger.debug("create annotation as citation ...")
         #the OAnnotation
-        subject = URIRef(charme.annoID)
+        subject = URIRef(chnode.annoID)
         graph.add((subject, RDF.type, oa.Annotation))
         #graph.add((subject, RDF.type, cito.CitationAct))
         #the bodies
-        graph.add((subject, oa.hasBody, charme.bodyID))
+        graph.add((subject, oa.hasBody, chnode.bodyID))
         graph.add((subject, oa.hasBody, citingEntity))
         #the target
         graph.add((subject, oa.hasTarget, citedEntity))
@@ -128,7 +130,7 @@ def xml2rdf(ifh, rdf_handles):
         #graph.add((subject, cito.hasCitedEntity, citedEntity))
 
         # creating the body
-        subject = URIRef(charme.bodyID)
+        subject = URIRef(chnode.bodyID)
         graph.add((subject, RDF.type, cnt.ContentAsText))
         graph.add((subject, RDF.type, dcmi.Text))
         graph.add((subject, DC['format'], Literal('text/plain')))
@@ -240,6 +242,9 @@ def main(arguements):
         elif opt in ("-l", "--loglevel"):
             logger.debug("--loglevel: %s" % arg)
             logger.setLevel(int(arg))
+
+    if dir is not None:
+        init("..")
 
     namespaces["datacite"]=namespaces["datacite"].format(datacite_xsd_version)
     #getting the doi-xml-files we want to handle
