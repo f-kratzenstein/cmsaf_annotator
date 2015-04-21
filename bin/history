@@ -1,0 +1,14 @@
+#!/bin/sh
+
+vi CHARMeService.cfg
+
+./getCHARMeToken.sh
+
+TEST_VERSION=V201504211006
+sed "s|&VERSION;|${TEST_VERSION}|g" ../templates/testDOI.xml > ../templates/testDOI_${TEST_VERSION}.xml
+
+python CMSAF_DOIXML_Editor.py -i ../templates/testDOI_${TEST_VERSION}.xml -d "2.2"
+
+python CMSAF_Annotator_DOI.py -w .. -f testDOI_${TEST_VERSION}.xml  -d "2.2"
+
+cat ../doi/n3/*.log

@@ -58,7 +58,7 @@ unset password
 echo 'curl -X GET "${charme_node}/oauth2/authorize?client_id=${client_id}&response_type=token" -c cookies.txt -b cookies.txt -D header -L  > /dev/null'
 curl -X GET "${charme_node}/oauth2/authorize?client_id=${client_id}&response_type=token" -c cookies.txt -b cookies.txt -D header -L  > /dev/null
 access_token=`grep access_token header | cut -d'=' -f2 | cut -d'&' -f1`;
-echo "oa_token: ${access_token}"
+echo "oa_token: ${access_token} for charme_node: ${CHARME_NODE}"
 sed -i -e "s/^TOKEN=[A-Za-z0-9]*$/TOKEN=${access_token}/" ../CHARMeService.cfg
 
 expires_in=`grep expires_in header  | cut -d'=' -f4 | cut -d'&' -f1`
