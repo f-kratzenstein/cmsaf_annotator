@@ -138,6 +138,14 @@ def main(arguements):
             logger.debug("--logLevel: %s" %arg)
             logger.setLevel(int(arg))
 
+    if (inputFile==""):
+        logger.warn("missing input param: inputFile")
+        usage()
+        sys.exit(2)
+
+    if not "dir_wrk" in dirs:
+        init("..")
+
     # make sure the file exists, else show an error and exit
     if ( os.path.isfile(inputFile)):
 

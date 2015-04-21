@@ -4,7 +4,7 @@ vi CHARMeService.cfg
 
 ./getCHARMeToken.sh
 
-TEST_VERSION=V201504211006
+TEST_VERSION=V201504211056
 sed "s|&VERSION;|${TEST_VERSION}|g" ../templates/testDOI.xml > ../templates/testDOI_${TEST_VERSION}.xml
 
 python CMSAF_DOIXML_Editor.py -i ../templates/testDOI_${TEST_VERSION}.xml -d "2.2"
